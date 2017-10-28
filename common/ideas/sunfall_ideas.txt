@@ -1,0 +1,2875 @@
+ideas = {
+	country = {
+
+
+#人民的力量
+		peoples_force = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+			
+			allowed = {
+				original_tag = PRC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.05
+			#	army_speed_factor = 0.05
+				out_of_supply_factor = -0.05
+		experience_loss_factor = -0.1
+	MONTHLY_POPULATION = 0.4 
+		conscription_factor = 0.3 #可征召人口因子
+	industrial_capacity_factory = 0.1 #工厂产出
+                conscription = 0.02
+			}
+	equipment_bonus = {
+	infantry = { build_cost_ic = -0.05 instant = yes }	
+	infantry_uniforms = { build_cost_ic = -0.05 instant = yes } }	 
+		}
+
+#觉醒的中国
+        united_china_territory = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_scw_intervention_nationalists_focus
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.10
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+#抗日救亡        
+        kangrijiuwang = {
+            allowed = {
+                always = no
+            }
+7            picture = generic_morale_bonus
+            modifier = {
+                experience_gain_factor = 0.5
+                out_of_supply_factor = -0.15
+                no_supply_grace = 60
+                conscription = 0.03
+            }
+        }
+
+#一寸河山一寸血        
+        yicunshanheyicunxue = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+            modifier = {
+                conscription = 0.01
+                consumer_goods_factor = -0.05
+                army_core_defence_factor = 0.1 #50
+	industrial_capacity_factory = 0.15 #工厂产出25
+	MONTHLY_POPULATION = -0.4 
+            }
+        }
+
+#血染的经验    
+        xuerandejingyan = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+            modifier = {
+                experience_gain_factor = 0.2
+                out_of_supply_factor = -0.05
+            }
+        }
+
+#血债血偿    
+        xuezhaixuechang = {
+            allowed = {
+                always = no
+            }
+            picture = generic_morale_bonus
+            modifier = {
+                army_morale_factor = 0.05
+            }
+        }
+
+#末日    
+        EndOfJAP = {
+            allowed = {
+                always = no
+            }
+            picture = generic_volunteer_expedition_bonus
+            modifier = {
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+#民心所向
+        MinXinSuoXiang = {
+            allowed = {
+                always = no
+            }
+            picture = generic_morale_bonus
+            modifier = {
+                army_core_attack_factor = 0.2
+                army_core_defence_factor = 0.4
+            }
+        }
+
+#军民同心
+        JunMinTongXin = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                unity_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+
+#五年计划
+        WuNianJiHua = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                local_resources_factor = 0.20
+            }
+        }
+
+#大跃进    
+        DaYueJin = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.20
+                research_time_factor = 0.30
+                local_resources_factor = -0.40
+                unity_factor = -0.20
+            }
+        }
+
+#大跃进的反思    
+        DaYueJinII = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.05
+            }
+        }
+
+#精英科学家  
+        JingYingKeXueJia = {
+            allowed = {
+                always = no
+            }
+            picture = generic_research_bonus
+            modifier = {
+                research_time_factor = -0.05
+            }
+        }
+
+#共产主义同志  
+        GongChanZhuYiTongZhi = {
+            allowed = {
+                always = no
+            }
+            picture = generic_communism_drift_bonus
+            modifier = {
+                line_change_production_efficiency_factor = 0.15
+            }
+        }
+
+#一五六工程
+        YiWuLiuGongCheng = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                local_resources_factor = 0.20
+            }
+        }
+
+#自强之路
+        ZiQiangZhiLu = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_matignon_agreements
+            modifier = {
+                line_change_production_efficiency_factor = 0.10
+            }
+        }
+
+#######################################################################################
+
+#镇压共产主义
+        SunFallCHIidea_ZhenYaGongChan = {
+            allowed = {
+                always = no
+            }
+            picture = officers_purged
+            modifier = {
+                communism_drift = -0.04
+            }
+        }
+
+#官僚买办的政党
+        SunFallCHIidea_GuanLiaoMaiBan = {
+            allowed = {
+                always = no
+            }
+            picture = generic_disjointed_gov
+            modifier = {
+                consumer_goods_factor = 0.05
+                political_power_cost = 0.25
+#                research_time_factor = 0.15
+                industrial_capacity_factory = -0.25
+            }
+        }
+
+#貌合神离的军队
+        SunFallCHIidea_MaoHeShenLiDeJunDui = {
+            allowed = {
+                always = no
+            }
+            picture = generic_volunteer_expedition_bonus
+            modifier = {
+                army_org_Factor = -0.1
+                army_speed_factor = -0.1
+                army_attack_factor = -0.2
+            }
+            research_bonus = {
+#                land_doctrine = -0.05
+                naval_doctrine = -0.05
+                air_doctrine = -0.05
+#		infantry_weapons = -0.05
+            }
+        }
+
+
+#法币
+        SunFallCHIidea_FaBi = {
+            allowed = {
+                always = no
+            }
+            picture = office_of_strategic_services
+            modifier = {
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+
+#打老虎
+        SunFallCHIidea_DaLaoHu = {
+            allowed = {
+                always = no
+            }
+            picture = office_of_strategic_services
+            modifier = {
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
+                local_resources_factor = 0.05
+            }
+        }
+
+#GMD土地改革
+        SunFallCHIidea_GMDTuGai = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+                unity_factor = 0.05
+                consumer_goods_factor = -0.05
+            }
+        }
+
+#大规模清党
+        SunFallCHIidea_QingDang = {
+            allowed = {
+                always = no
+            }
+            picture = socialist_science_focus
+            modifier = {
+                political_power_cost = 1.0
+                research_time_factor = 0.1
+                army_org_Factor = -0.1
+                army_speed_factor = -0.1
+            }
+        }
+
+#国民党基因改造
+        SunFallCHIidea_GMDGaiZao = {
+            allowed = {
+                always = no
+            }
+            picture = socialist_science_focus
+            modifier = {
+                political_power_cost = 0.5
+                research_time_factor = 0.05
+                army_org_Factor = -0.05
+                army_speed_factor = -0.05
+            }
+        }
+
+#高效干练的政党
+        SunFallCHIidea_GaoXiaoGanLian = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_matignon_agreements
+            modifier = {
+                political_power_factor = 0.10
+            }
+        }
+
+#组建精锐军队
+        SunFallidea_JingRuiJunDui = {
+            allowed = {
+                always = no
+            }
+            picture = generic_intel_bonus
+            modifier = {
+                army_org_Factor = 0.05
+            }
+        }
+
+#蒋中正御下术
+        SunFallCHIidea_JiangZhongZhengYuXia = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+            modifier = {
+                political_power_cost = -0.15
+                industrial_capacity_factory = 0.03
+                army_org_Factor = 0.03
+            }
+        }
+
+#蒋中正御下术2
+        SunFallCHIidea_JiangZhongZhengYuXia2 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+            modifier = {
+                political_power_cost = -0.20
+                industrial_capacity_factory = 0.04
+                army_org_Factor = 0.04
+            }
+        }
+
+#蒋中正御下术
+        SunFallCHIidea_JiangZhongZhengYuXia3 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+            modifier = {
+                political_power_cost = -0.25
+                industrial_capacity_factory = 0.05
+                army_org_Factor = 0.05
+            }
+        }
+
+#全军发展
+        SunFallCHIidea_QuanJunFaZhan = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            equipment_bonus = {
+            	infantry_equipment = {
+            		build_cost_ic = -0.25 instant = yes
+            	}
+            }
+        }
+
+#注重嫡系
+        SunFallCHIidea_ZhuZhongDiXi = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            modifier = {
+                army_infantry_attack_factor = 0.05
+                army_infantry_defence_factor = 0.05
+                unity_factor = -0.05
+            }
+        }
+
+#苏联援助
+        SunFallCHIidea_SuLianYuanZhu = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                industrial_capacity_factory = 0.1
+            }
+        }
+
+#美国援助
+        SunFallCHIidea_MeiGuoYuanZhu = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                industrial_capacity_factory = 0.2
+            }
+        }
+
+#美国援助强化
+        SunFallCHIidea_MeiGuoYuanZhuQiangHua = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                industrial_capacity_factory = 0.1
+            }
+        }
+
+#给予中华民国援助
+        SunFallCHIidea_YuanZhuCHI = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+            modifier = {
+                industrial_capacity_factory = -0.05
+            }
+        }
+
+#齐心抗日
+        SunFallidea_QiXinKangRi = {
+            allowed = {
+                always = no
+            }
+            picture = generic_morale_bonus
+            modifier = {
+                consumer_goods_factor = -0.1
+                local_resources_factor = 0.2
+#                army_org_Factor = 0.1
+#                army_org_Factor = 0.05
+                army_speed_factor = 0.05
+#               army_attack_factor = 0.05
+#                army_core_attack_factor = 0.05
+                army_core_defence_factor = 0.05
+	industrial_capacity_factory = 0.1 #工厂产出
+            }
+        }
+        kangzhanchuqi_rijun = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+	equipment_bonus = {
+		infantry_equipment = {
+			build_cost_ic = -0.1 instant = yes
+					}}
+            modifier = {
+                army_org_Factor = 0.05
+                army_morale_factor = 0.05
+                army_attack_factor = 0.05
+                army_defence_factor = 0.1
+		amphibious_invasion = 0.2 #登陆速度
+		invasion_preparation = -0.25 #登陆准备时间
+		amphibious_invasion_defence = 0.15 #登陆防护
+	supply_consumption_factor = -0.15 #补给使用
+		naval_invasion_capacity = 30 #海军入侵能力
+	training_time_army_factor = -0.1 #训练时间
+		minimum_training_level = -0.1
+		transport_capacity = -0.50 #海军运输船需求
+            }
+        }
+
+        kangzhanchuqi_rijun1 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            modifier = {
+                army_org_Factor = 0.15
+                army_morale_factor = 0.15
+ #               army_speed_factor = 0.5
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+	planning_speed = 0.5 #计划速度
+	max_planning = 0.25 #最大计划
+            }
+        }
+
+        kangzhanchuqi_rijun2 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            modifier = {
+                army_org_Factor = 0.1
+                army_morale_factor = 0.1
+  #              army_speed_factor = 0.1
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+            }
+        }
+
+#民国抗战逐渐增强BUFF1
+        chivsjap1 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+                army_org_Factor = -0.1
+                army_core_defence_factor = -0.1
+                army_core_attack_factor = -0.1
+            }
+        }
+
+#民国抗战逐渐增强BUFF2
+        chivsjap2 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+                army_org_Factor = -0.05
+                army_core_defence_factor = -0.05
+                army_core_attack_factor = -0.05
+            }
+        }
+
+#民国抗战逐渐增强BUFF3
+        chivsjap3 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+
+            }
+        }
+#民国抗战逐渐增强BUFF4
+        chivsjap4 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+                army_core_defence_factor = 0.05
+		land_reinforce_rate = 0.02 #增援
+			partisan_effect = 0.05 #游击战效率
+		conscription_factor = 0.1 #可征召人口因子
+            }
+        }
+#民国抗战逐渐增强BUFF5
+        chivsjap5 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+                army_org_Factor = 0.05
+                army_core_defence_factor = 0.1
+                army_core_attack_factor = 0.05
+	industrial_capacity_factory = 0.1 #工厂产出
+		land_reinforce_rate = 0.04 #增援
+			partisan_effect = 0.1 #游击战效率
+		conscription_factor = 0.12 #可征召人口因子
+            }
+        }
+#民国抗战逐渐增强BUFF6
+        chivsjap6 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+		equipment_bonus = {
+		infantry = {
+		build_cost_ic = -0.1 instant = yes
+		}}
+            modifier = {
+                army_org_Factor = 0.1
+                army_core_defence_factor = 0.15
+                army_core_attack_factor = 0.075
+	industrial_capacity_factory = 0.2 #工厂产出
+	training_time_army_factor = -0.1 #训练时间
+		minimum_training_level = -0.1
+		land_reinforce_rate = 0.06 #增援
+			partisan_effect = 0.2 #游击战效率
+		conscription_factor = 0.14 #可征召人口因子
+            }
+        }
+#民国抗战逐渐增强BUFF7
+        chivsjap7 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+		equipment_bonus = {
+		infantry = {
+		build_cost_ic = -0.2 instant = yes
+		}}
+            modifier = {
+                army_org_Factor = 0.2
+                army_core_defence_factor = 0.2
+                army_core_attack_factor = 0.1
+	industrial_capacity_factory = 0.3 #工厂产出
+	training_time_army_factor = -0.2 #训练时间
+		minimum_training_level = -0.2
+		land_reinforce_rate = 0.08 #增援
+			partisan_effect = 0.3 #游击战效率
+		conscription_factor = 0.16 #可征召人口因子
+            }
+        }
+#民国抗战逐渐增强BUFF8
+        chivsjap8 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+		equipment_bonus = {
+		infantry = {
+		build_cost_ic = -0.3 instant = yes
+		}}
+            modifier = {
+                army_org_Factor = 0.3
+                army_core_defence_factor = 0.25
+                army_core_attack_factor = 0.125
+	industrial_capacity_factory = 0.4 #工厂产出
+	training_time_army_factor = -0.3 #训练时间
+		minimum_training_level = -0.3
+		land_reinforce_rate = 0.10 #增援
+			partisan_effect = 0.4 #游击战效率
+		conscription_factor = 0.18 #可征召人口因子
+            }
+        }
+#民国抗战逐渐增强BUFF9
+        chivsjap9 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+		equipment_bonus = {
+		infantry = {
+		build_cost_ic = -0.4 instant = yes
+		}}
+            modifier = {
+                army_org_Factor = 0.4
+                army_core_defence_factor = 0.3
+                army_core_attack_factor = 0.15
+	industrial_capacity_factory = 0.5 #工厂产出
+	training_time_army_factor = -0.4 #训练时间
+		minimum_training_level = -0.4
+		land_reinforce_rate = 0.15 #增援
+			partisan_effect = 0.5 #游击战效率
+		conscription_factor = 0.2 #可征召人口因子
+            }
+        }
+#殖民地印度
+        zhimindi_yindu = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+                army_morale_factor = -0.1 #组织度回复
+		conscription_factor = -0.25 #可征召人口因子
+            }
+        }
+
+#ai中国防御玩家日本
+        chifangyu1 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+			unity_factor = 0.1 #国家凝聚力
+			partisan_effect = 0.6 #游击战效率
+			army_speed_factor = 0.15 #陆军师速度
+			army_core_attack_factor = 0.3 #核心领土的攻击
+			army_core_defence_factor = 0.6 #核心领土的防御
+			conscription = 0.08 #适役人口
+			army_org_Factor = 0.3 #组织度加成
+		research_time_factor = -0.3 #研究时间
+	industrial_capacity_factory = 1 #工厂产出
+	local_resources_factor = 0.5 #资源产量
+	training_time_army_factor = -0.4 #训练时间
+            }
+        }
+
+#ai中国防御ai日本限时
+        chifangyu2 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_volunteer_expedition_bonus
+	modifier = {
+			planning_speed = -0.1
+			army_morale_factor = -0.1
+			army_attack_factor = -0.25 
+			army_defence_factor = -0.125 
+			army_org_Factor = -0.1 #组织度加成
+			}
+        }
+#ai中国防御ai日本
+        chifangyu3 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.3 instant = yes
+					}}
+			modifier = {
+			partisan_effect = 0.05 #游击战效率
+			}
+        }
+#玩家中国防御ai日本
+        chifangyu4 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_goods_red_bonus
+			modifier = {
+				army_attack_factor = -0.05 
+				army_defence_factor = -0.05 
+			}
+        }
+#玩家中国防御ai日本长时间
+        chifangyu5 = {
+            allowed = {
+                always = no
+            }
+            picture = generic_volunteer_expedition_bonus
+			modifier = {
+				army_attack_factor = -0.1
+			}
+        }
+
+#ai中国对中共玩家内战
+        chivschc = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            modifier = {
+                army_core_attack_factor = 0.3
+                army_core_defence_factor = 0.5
+	industrial_capacity_factory = 0.5 #工厂产出
+                army_org_Factor = 0.2
+                army_morale_factor = 0.2
+            }
+        }
+#ai日本与美国战争
+        chinadf = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_matignon_agreements
+            modifier = {
+                army_defence_factor = 0.1
+            }
+        }
+#玩家瑞典
+        ruidian = {
+            allowed = {
+                always = no
+            }
+            picture = generic_infantry_bonus
+            modifier = {
+		conscription_factor = 0.3 #可征召人口因子
+		industrial_capacity_factory = 0.1 #工厂产出
+		research_time_factor = -0.05 #研究时间
+                army_attack_factor = 0.05
+                army_defence_factor = 0.05
+                army_org_Factor = 0.05
+                army_morale_factor = 0.05
+            }
+        }
+
+#落日后的日本    
+        sunfalljap = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+	equipment_bonus = {
+			destroyer = { build_cost_ic = -0.3 instant = yes } #驱逐舰
+			light_cruiser = { build_cost_ic = -0.3 instant = yes } #轻巡
+			heavy_cruiser = { build_cost_ic = -0.3 instant = yes } #重巡
+			battle_cruiser = { build_cost_ic = -0.3 instant = yes } #战巡
+			battleship = { build_cost_ic = -0.3 instant = yes } #战列舰
+			SH_battleship_1 = { build_cost_ic = -0.3 instant = yes } #超重战列
+			carrier = { build_cost_ic = -0.3 instant = yes } #航母
+			submarine = { build_cost_ic = -0.3 instant = yes } #潜艇            
+        }
+            modifier = {
+	local_resources_factor = 0.45
+               industrial_capacity_factory = 0.45 #工业产出
+	industrial_capacity_dockyard = 0.75 #船坞产能
+               MONTHLY_POPULATION = 4 #人口增长,为了天皇拼命啪啪啪
+		conscription = 0.075
+	army_attack_factor = 0.225 #单位攻击
+	army_defence_factor = 0.225 #单位防御
+			navy_capital_ship_attack_factor = 0.45 #主力舰攻击
+			navy_capital_ship_defence_factor = 0.45 #主力舰装甲
+	navy_screen_attack_factor = 0.45 #护卫舰攻击
+	navy_screen_defence_factor = 0.45 #护卫舰防御
+			navy_carrier_air_targetting_factor = 0.45 #航母舰载机空中瞄准
+			sortie_efficiency = 0.45 #舰载机出击效率
+			navy_anti_air_attack_factor = 0.6 #海军对空防御
+	training_time_army_factor = -0.375 #训练时间
+		minimum_training_level = -0.375
+            }
+        }
+#苏联阅兵 
+SOVYUEBING = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+            modifier = {
+               industrial_capacity_factory = 0.5 #工业产出
+	army_morale_Factor = 0.4 #陆军组织度恢复
+		conscription_factor = 0.2 #可征召人口因子
+                army_core_defence_factor = 0.5 #核心防御力
+                army_core_attack_factor = 0.20 #核心攻击力
+			army_org_Factor = 0.2 #组织度加成
+            }
+        }
+#民主兵工厂 
+USAWAR = {
+            allowed = {
+                always = no
+            }
+            picture = FRA_national_mobilization_focus
+            modifier = {
+               industrial_capacity_factory = 0.2 #工业产出
+	production_factory_efficiency_gain_factor = 0.2 #生产效率增加速度
+	production_factory_max_efficiency_factor = 0.1 #生产效率值上限
+	production_speed_buildings_factor = 0.15 #建筑速度
+            }
+        }
+
+#强化5级
+        qianghua5= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+	dig_in_speed_factor = 0.625 #挖掘工事速度
+	planning_speed = 0.625 #计划速度
+	supply_consumption_factor = -0.125 #补给使用
+	no_supply_grace = 144 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.375 #缺乏补给的影响
+	army_morale_Factor = 0.375 #陆军组织度恢复
+	land_reinforce_rate = 0.05 #陆军增援速度
+	army_core_attack_factor = 0.25 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.25 #核心陆军防御效率
+	army_attack_factor = 0.125 #陆军攻击力
+	army_defence_factor = 0.125 #陆军防御效率
+	production_factory_max_efficiency_factor = 0.375 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.625 #生产效率增加速度
+	political_power_factor = 0.5 #政治
+	research_time_factor = -0.125 #研究时间
+	experience_gain_army_factor = 0.625 #陆军(军团)经验获取比例
+	experience_gain_navy_factor = 0.625 #海军经验获取值
+	experience_gain_air_factor = 0.625 #空军经验获取值
+	experience_gain_army_unit_factor= 0.25 #部队经验获得
+	experience_gain_navy_unit_factor= 0.25 #海军经验获得
+	production_speed_buildings_factor = 0.375 #建筑速度
+			MONTHLY_POPULATION = 0.05 #月度人力
+		conscription = 0.005 #适役人口
+            }
+        }
+
+#强化4级
+        qianghua4= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+	dig_in_speed_factor = 0.5 #挖掘工事速度
+	planning_speed = 0.5 #计划速度
+	supply_consumption_factor = -0.1 #补给使用
+	no_supply_grace = 144 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.3 #缺乏补给的影响
+	army_morale_Factor = 0.3 #陆军组织度恢复
+	land_reinforce_rate = 0.04 #陆军增援速度
+	army_core_attack_factor = 0.2 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.2 #核心陆军防御效率
+	army_attack_factor = 0.1 #陆军攻击力
+	army_defence_factor = 0.1 #陆军防御效率
+	production_factory_max_efficiency_factor = 0.3 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.5 #生产效率增加速度
+	political_power_factor = 0.4 #政治
+	research_time_factor = -0.1 #研究时间
+	experience_gain_army_factor = 0.5 #陆军(军团)经验获取比例
+	experience_gain_navy_factor = 0.5 #海军经验获取值
+	experience_gain_air_factor = 0.5 #空军经验获取值
+	experience_gain_army_unit_factor= 0.2 #部队经验获得
+	experience_gain_navy_unit_factor= 0.2 #海军经验获得
+	production_speed_buildings_factor = 0.3 #建筑速度
+			MONTHLY_POPULATION = 0.06 #月度人力
+		conscription = 0.006 #适役人口
+            }
+        }
+#强化3级
+        qianghua3= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+	dig_in_speed_factor = 0.375 #挖掘工事速度
+	planning_speed = 0.375 #计划速度
+	supply_consumption_factor = -0.075 #补给使用
+	no_supply_grace = 108 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.225 #缺乏补给的影响
+	army_morale_Factor = 0.225 #陆军组织度恢复
+	land_reinforce_rate = 0.03 #陆军增援速度
+	army_core_attack_factor = 0.15 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.15 #核心陆军防御效率
+	army_attack_factor = 0.075 #陆军攻击力
+	army_defence_factor = 0.075 #陆军防御效率
+	production_factory_max_efficiency_factor = 0.225 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.375 #生产效率增加速度
+	political_power_factor = 0.3 #政治
+	research_time_factor = -0.075 #研究时间
+	experience_gain_army_factor = 0.375 #陆军(军团)经验获取比例
+	experience_gain_navy_factor = 0.375 #海军经验获取值
+	experience_gain_air_factor = 0.375 #空军经验获取值
+	experience_gain_army_unit_factor= 0.15 #部队经验获得
+	experience_gain_navy_unit_factor= 0.15 #海军经验获得
+	production_speed_buildings_factor = 0.225 #建筑速度
+			MONTHLY_POPULATION = 0.07 #月度人力
+		conscription = 0.007 #适役人口
+            }
+        }
+#强化2级
+        qianghua2= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+	dig_in_speed_factor = 0.25 #挖掘工事速度
+	planning_speed = 0.25 #计划速度
+	supply_consumption_factor = -0.05 #补给使用
+	no_supply_grace = 72 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.15 #缺乏补给的影响
+	army_morale_Factor = 0.15 #陆军组织度恢复
+	land_reinforce_rate = 0.02 #陆军增援速度
+	army_core_attack_factor = 0.1 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.1 #核心陆军防御效率
+	army_attack_factor = 0.05 #陆军攻击力
+	army_defence_factor = 0.05 #陆军防御效率
+	production_factory_max_efficiency_factor = 0.15 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.25 #生产效率增加速度
+	political_power_factor = 0.2 #政治
+	research_time_factor = -0.05 #研究时间
+	experience_gain_army_factor = 0.25 #陆军(军团)经验获取比例
+	experience_gain_navy_factor = 0.25 #海军经验获取值
+	experience_gain_air_factor = 0.25 #空军经验获取值
+	experience_gain_army_unit_factor= 0.1 #部队经验获得
+	experience_gain_navy_unit_factor= 0.1 #海军经验获得
+	production_speed_buildings_factor = 0.15 #建筑速度
+			MONTHLY_POPULATION = 0.08 #月度人力
+		conscription = 0.008 #适役人口
+            }
+        }
+#强化1级
+       qianghua1= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+	dig_in_speed_factor = 0.125 #挖掘工事速度
+	planning_speed = 0.125 #计划速度
+	supply_consumption_factor = -0.025 #补给使用
+	no_supply_grace = 36 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.075 #缺乏补给的影响
+	army_morale_Factor = 0.075 #陆军组织度恢复
+	land_reinforce_rate = 0.01 #陆军增援速度
+	army_core_attack_factor = 0.05 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.05 #核心陆军防御效率
+	army_attack_factor = 0.025 #陆军攻击力
+	army_defence_factor = 0.025 #陆军防御效率
+	production_factory_max_efficiency_factor = 0.075 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.125 #生产效率增加速度
+	political_power_factor = 0.1 #政治
+	research_time_factor = -0.025 #研究时间
+	experience_gain_army_factor = 0.125 #陆军(军团)经验获取比例
+	experience_gain_navy_factor = 0.125 #海军经验获取值
+	experience_gain_air_factor = 0.125 #空军经验获取值
+	experience_gain_army_unit_factor= 0.05 #部队经验获得
+	experience_gain_navy_unit_factor= 0.05 #海军经验获得
+	production_speed_buildings_factor = 0.075 #建筑速度
+			MONTHLY_POPULATION = 0.09 #月度人力
+		conscription = 0.009 #适役人口
+            }
+        }
+
+#强化0级
+       qianghua0= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+			MONTHLY_POPULATION = 0.10 #月度人力
+		conscription = 0.01 #适役人口
+            }
+        }
+#侵略惩罚
+       qianghua01= {
+            allowed = {
+                always = no
+            }
+            picture = soviet_german_friendship
+            modifier = {
+
+            }
+        }
+
+#中国统一后建设1
+        dajianshe= {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+	production_speed_buildings_factor = 0.25
+            }
+        }
+#中国统一后建设2
+        dajianshe1= {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+	production_speed_buildings_factor = 0.5
+            }
+        }
+#人口用于建设
+        dajianshe2= {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+	production_speed_buildings_factor = 0.2
+		conscription_factor = -0.5 #可征召人口因子
+            }
+        }
+#失败的中国龙
+        zhongguolong = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+		conscription_factor = -0.5 #可征召人口因子
+            }
+        }
+
+#英国绝不投降
+        zuihouyizhan= {
+            allowed = {
+                always = no
+            }
+            picture = generic_victors_of_ww1
+            modifier = {
+          air_mission_efficiency = 0.25 #空军任务效率
+	production_factory_max_efficiency_factor = 0.15 #生产效率值上限
+	production_factory_efficiency_gain_factor = 0.25 #生产效率增加速度
+               industrial_capacity_factory = 0.2 #工业产出
+            }
+        }
+
+#玩家飞机造价
+        pl_fly = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+	send_volunteer_size = 2 #志愿军师上限
+	send_volunteer_divisions_required = -1 #志愿军师下限
+	air_accidents = 0.1 #空军失事机率
+		air_cas_present_factor = 0.5 #对地支援率
+            }
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				jet_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				rocket_interceptor_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				rocket_suicide_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				jet_tac_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				jet_strat_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				flying_boat_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mureaux_113_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				loire_46_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ms_405_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ms_406_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ms_410_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ms_450_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				spad_510_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_151_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_157_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				d_371_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				d_500_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				d_520_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				potez_630_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				potez_631_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				arsenal_vb10_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				potez_25_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				breguet_27_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mureaux_115_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ln_411_CAS_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ln_42_CAS_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_131_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				potez_633_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_174_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				breguet_691_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				amiot_350_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				amiot_351_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				amiot_143_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_200_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_210_bomber_equipment  = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				leo_451_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				farman_221_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				amiot_144_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				farman_221_bomber_equipment_3 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bloch_162_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				breguet_482_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pl_15_nav_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				latecoere_290_nav_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				leo_258_nav_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				leo_257_nav_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				latecoere_298_nav_bomber_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+				latecoere_299_nav_bomber_equipment_1  = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_5_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				no_upgrade_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_z_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_7_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				di_6_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_15_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_152_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_155_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_16_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				yak_1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				yak_7_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				yak_5_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				yak_9_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				lagg_1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				lagg_5_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				lagg_5_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				lagg_7_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mig_1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mig_5_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				i_14_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ip_1_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pe_2_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pe_5_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tu_2_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				il_2_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				il_10_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				r_5_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				r_5_nav_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				r_10_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				sb_2m_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ar_2_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pe_2_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pe_2i_bomber_equipment  = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				db_5_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				il_4_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tu_2_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tb_5_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				pe_8_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				db_5t_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				po_2_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				po_witch_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_51_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ar_68_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_early_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_d_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_mid_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_late_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_g_fighter_equipment  = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_k_fighter_equipment  = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_112_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_100_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				fw_190_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				fw_190_d_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ta_152_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ar_197_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_109_t_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_155_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_66_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ju_87_cv_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				fi_167_bomber_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				bf_110_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_410_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				me_262_fighter_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_46_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_50_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				hs_123_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ju_87_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				hs_129_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_45_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ju_52_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				do_17_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ju_88_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ar_234_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				do_23_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_111_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				do_217_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				do_217_k_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_177_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				wever_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				he_59_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				fw_200_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				fw_200_c8_bomber_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				ms_41_fighter_equipment_1 = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_t92_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_10_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_27_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_44_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_43_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_61_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_84_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tachikawa_ki_106_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_100_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_45_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_45_kai_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_102_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_4_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				tachikawa_ki_36_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_51_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mansyu_ki_71_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_66_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}	
+				mitsubishi_ki_2_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_3_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_30_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_32_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_48_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawasaki_ki_119_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_21_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_49_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_67_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_ki_115_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				seversky_a8v1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_j2m_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_n1k1j_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_n1k2j_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kyushu_j7w_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_j8m_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_j1n_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_g3m_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_g4m_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_g4m2_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				yokosuka_p1_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_ki_20_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_g5n_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_g8n_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_kikka_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				nakajima_a6m2n_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_n1k_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_e7k_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				mitsubishi_f1m_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				aichi_e13a_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				aichi_e16a_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				aichi_m6a_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_h6k_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+				kawanishi_h8k_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+pre_war_fighter_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+pre_war_mr_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+prewar_cas_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+prewar_bomber_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+prewar_flying_boat_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+war_cas_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+usa_boeing_p26_equipment_1 = { build_cost_ic = 2.0 instant = yes } 
+seversky_p35_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+republic_p43_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+bell_p63_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+republic_p47j_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+curtiss_p36_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+curtiss_p40_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northamerican_mustang_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vought_corsair_not_carrier_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vought_corsair_equipment_1 = { build_cost_ic = 2.0 instant = yes } 
+northamerican_p51h_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_p30_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+seversky_a8v1_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+bell_p39_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+republic_p47_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+republic_p72_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+bell_yfm1_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+lockheed_p38_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northrop_p61_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f7f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northamerican_p82_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+bell_p59_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+bell_p83_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+lockheed_p80_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northrop_a17_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vultee_a19_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+curtiss_a18_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vultee_a31_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northamerican_a36_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+beechcraft_a38_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+martin_b10_bomber_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+martin_a22_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northamerican_b25_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+carrier_b25_equipment_1 = { build_cost_ic = 2.0 instant = yes } 
+northamerican_b28_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_a20_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_a26_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_b18_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_b23_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+martin_b26_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_b42_equipment_1 = { build_cost_ic = 2.0 instant = yes } 
+boeing_b17_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+boeing_b15_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_b24_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+boeing_b29_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_b32_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_tbd_1 = { build_cost_ic = 2.0 instant = yes }
+a_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+lockheed_a28_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+lockheed_pv1_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_pb4y_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_p2y_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_pby_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_pb2y_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+martin_pbm_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+naf_pbn_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+boeing_f4b4_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_ff_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f2f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f3f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+brewster_f2a_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f4f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f6f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_f8f_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+ryan_fr1_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+lakes_bg_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vought_sbu_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+northrop_bt_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+curtiss_sbc_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+vought_vindicator_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_dauntless_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+brewster_sb2a_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+curtiss_sb2c_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+btd_destroyer_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+great_lakes_tg2_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+martin_bm_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+douglas_tbd_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+grumman_tbf_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+consolidated_tby_equipment_1 = { build_cost_ic = 2.0 instant = yes }
+		    pre_war_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    war_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    gauntlet_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    gladiator_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    defiant_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    griffon_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    martinbaker_fighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    pre_war_af_equipment  = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_demon_equipment  = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    spitfire_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    late_spitfire_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    spiteful_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    pre_war_mr_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_fury_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_hurricane_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_typhoon_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_tempest_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_monofury_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    prewar_cas_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    war_cas_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_hind_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    fairey_battle_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    westland_lysander_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hawker_hurricane_iic_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    gloster_meteor_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    dehaviland_vampire_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		 #   cv_fighter_equipment = {  build_cost_ic = 2.0 instant = yes }
+		 #   cv_CAS_equipment = {  build_cost_ic = 2.0 instant = yes }
+		 #   cv_nav_bomber_equipment = { build_cost_ic = 2.0 instant = yes }
+		    spotter_planes_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+
+
+		    bristol_blenheim_f_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    prewar_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    vickers_valentia_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    vickers_wellesley_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    bristol_bolingbroke_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    bristol_blenheim_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    prewar_flying_boat_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    saro_london_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    short_sunderland_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    short_seaford_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    vickers_warwick_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    prewar_medium_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    handley_harrow_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    bombay_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    handley_hampden_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    vickers_wellington_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    vickers_wellingtonvi_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    bristol_buckingham_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    hendon_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    aw_whitley_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    avro_manchester_bomber_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    short_stirling_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    handley_halifax_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    avro_lancaster_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    avro_lincoln_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    avro_lancaster_special_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		transport_plane_equipment = {
+					build_cost_ic = 2.0 instant = yes
+				}
+		bristol_beaufighter_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    westland_whirlwind_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    mosquito_hvf_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    welkin_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+				mosquito_cas_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    bristol_brigand_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+		    mosquito_fsb_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+				bristol_beaufort_equipment = {
+		      build_cost_ic = 2.0 instant = yes
+		    }
+
+        }
+ }
+
+#电脑飞机造价
+        ai_fly = {
+            allowed = {
+                always = no
+            }
+            picture = generic_production_bonus
+            modifier = {
+	send_volunteer_size = 2 #志愿军师上限
+	send_volunteer_divisions_required = -1 #志愿军师下限
+	air_accidents = 0.1 #空军失事机率
+		air_cas_present_factor = 0.5 #对地支援率
+            }
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				jet_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				rocket_interceptor_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				rocket_suicide_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tac_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				jet_tac_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				heavy_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				strat_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				jet_strat_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				flying_boat_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mureaux_113_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				loire_46_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ms_405_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ms_406_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ms_410_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ms_450_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				spad_510_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_151_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_157_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				d_371_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				d_500_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				d_520_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				potez_630_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				potez_631_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				arsenal_vb10_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				potez_25_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				breguet_27_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mureaux_115_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ln_411_CAS_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ln_42_CAS_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_131_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				potez_633_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_174_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				breguet_691_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				amiot_350_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				amiot_351_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				amiot_143_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_200_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_210_bomber_equipment  = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				leo_451_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				farman_221_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				amiot_144_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				farman_221_bomber_equipment_3 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bloch_162_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				breguet_482_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pl_15_nav_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				latecoere_290_nav_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				leo_258_nav_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				leo_257_nav_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				latecoere_298_nav_bomber_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+				latecoere_299_nav_bomber_equipment_1  = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_5_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				no_upgrade_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_z_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_7_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				di_6_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_15_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_152_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_155_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_16_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				yak_1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				yak_7_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				yak_5_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				yak_9_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				lagg_1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				lagg_5_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				lagg_5_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				lagg_7_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mig_1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mig_5_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				i_14_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ip_1_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pe_2_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pe_5_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tu_2_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				il_2_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				il_10_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				r_5_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				r_5_nav_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				r_10_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				sb_2m_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ar_2_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pe_2_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pe_2i_bomber_equipment  = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				db_5_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				il_4_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tu_2_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tb_5_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				pe_8_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				db_5t_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				po_2_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				po_witch_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_51_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ar_68_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_early_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_d_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_mid_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_late_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_g_fighter_equipment  = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_k_fighter_equipment  = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_112_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_100_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				fw_190_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				fw_190_d_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ta_152_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ar_197_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_109_t_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_155_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_66_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ju_87_cv_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				fi_167_bomber_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				bf_110_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_410_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				me_262_fighter_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_46_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_50_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				hs_123_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ju_87_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				hs_129_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_45_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ju_52_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				do_17_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ju_88_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ar_234_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				do_23_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_111_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				do_217_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				do_217_k_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_177_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				wever_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				he_59_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				fw_200_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				fw_200_c8_bomber_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				ms_41_fighter_equipment_1 = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_t92_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_10_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_27_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_44_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_43_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_61_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_84_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tachikawa_ki_106_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_100_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_45_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_45_kai_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_102_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_4_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				tachikawa_ki_36_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_51_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mansyu_ki_71_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_66_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}	
+				mitsubishi_ki_2_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_3_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_30_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_32_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_48_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawasaki_ki_119_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_21_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_49_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_67_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_ki_115_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				seversky_a8v1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_j2m_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_n1k1j_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_n1k2j_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kyushu_j7w_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_j8m_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_j1n_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_g3m_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_g4m_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_g4m2_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				yokosuka_p1_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_ki_20_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_g5n_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_g8n_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_kikka_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				nakajima_a6m2n_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_n1k_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_e7k_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				mitsubishi_f1m_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				aichi_e13a_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				aichi_e16a_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				aichi_m6a_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_h6k_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+				kawanishi_h8k_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+pre_war_fighter_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+pre_war_mr_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+prewar_cas_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+prewar_bomber_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+prewar_flying_boat_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+war_cas_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+usa_boeing_p26_equipment_1 = { build_cost_ic = 3.0 instant = yes } 
+seversky_p35_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+republic_p43_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+bell_p63_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+republic_p47j_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+curtiss_p36_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+curtiss_p40_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northamerican_mustang_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vought_corsair_not_carrier_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vought_corsair_equipment_1 = { build_cost_ic = 3.0 instant = yes } 
+northamerican_p51h_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_p30_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+seversky_a8v1_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+bell_p39_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+republic_p47_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+republic_p72_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+bell_yfm1_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+lockheed_p38_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northrop_p61_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f7f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northamerican_p82_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+bell_p59_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+bell_p83_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+lockheed_p80_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northrop_a17_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vultee_a19_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+curtiss_a18_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vultee_a31_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northamerican_a36_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+beechcraft_a38_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+martin_b10_bomber_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+martin_a22_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northamerican_b25_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+carrier_b25_equipment_1 = { build_cost_ic = 3.0 instant = yes } 
+northamerican_b28_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_a20_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_a26_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_b18_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_b23_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+martin_b26_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_b42_equipment_1 = { build_cost_ic = 3.0 instant = yes } 
+boeing_b17_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+boeing_b15_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_b24_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+boeing_b29_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_b32_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_tbd_1 = { build_cost_ic = 3.0 instant = yes }
+a_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+lockheed_a28_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+lockheed_pv1_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_pb4y_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_p2y_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_pby_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_pb2y_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+martin_pbm_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+naf_pbn_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+boeing_f4b4_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_ff_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f2f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f3f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+brewster_f2a_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f4f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f6f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_f8f_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+ryan_fr1_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+lakes_bg_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vought_sbu_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+northrop_bt_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+curtiss_sbc_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+vought_vindicator_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_dauntless_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+brewster_sb2a_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+curtiss_sb2c_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+btd_destroyer_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+great_lakes_tg2_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+martin_bm_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+douglas_tbd_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+grumman_tbf_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+consolidated_tby_equipment_1 = { build_cost_ic = 3.0 instant = yes }
+		    pre_war_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    war_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    gauntlet_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    gladiator_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    defiant_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    griffon_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    martinbaker_fighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    pre_war_af_equipment  = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_demon_equipment  = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    spitfire_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    late_spitfire_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    spiteful_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    pre_war_mr_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_fury_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_hurricane_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_typhoon_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_tempest_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_monofury_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    prewar_cas_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    war_cas_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_hind_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    fairey_battle_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    westland_lysander_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hawker_hurricane_iic_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    gloster_meteor_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    dehaviland_vampire_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		 #   cv_fighter_equipment = {  build_cost_ic = 3.0 instant = yes }
+		 #   cv_CAS_equipment = {  build_cost_ic = 3.0 instant = yes }
+		 #   cv_nav_bomber_equipment = { build_cost_ic = 3.0 instant = yes }
+		    spotter_planes_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+
+
+		    bristol_blenheim_f_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    prewar_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    vickers_valentia_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    vickers_wellesley_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    bristol_bolingbroke_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    bristol_blenheim_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    prewar_flying_boat_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    saro_london_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    short_sunderland_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    short_seaford_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    vickers_warwick_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    prewar_medium_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    handley_harrow_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    bombay_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    handley_hampden_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    vickers_wellington_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    vickers_wellingtonvi_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    bristol_buckingham_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    hendon_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    aw_whitley_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    avro_manchester_bomber_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    short_stirling_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    handley_halifax_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    avro_lancaster_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    avro_lincoln_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    avro_lancaster_special_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		transport_plane_equipment = {
+					build_cost_ic = 3.0 instant = yes
+				}
+		bristol_beaufighter_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    westland_whirlwind_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    mosquito_hvf_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    welkin_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+				mosquito_cas_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    bristol_brigand_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+		    mosquito_fsb_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+				bristol_beaufort_equipment = {
+		      build_cost_ic = 3.0 instant = yes
+		    }
+                         }  
+              } 
+     
+
+#印度种姓制度
+        zhongxin_yindu = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+            modifier = {
+                army_org_Factor = -0.15
+                army_morale_factor = -0.1
+                industrial_capacity_factory = -0.1 #工业产出
+		conscription_factor = -0.1 #可征召人口因子
+            }
+        }
+
+aerbeisi_shandi = {
+            allowed = {
+                always = no
+            }
+            picture = generic_spy_intel
+            modifier = {
+		army_org_Factor = 0.1
+	army_core_attack_factor = 0.3 #核心领土上陆军攻击力
+	army_core_defence_factor = 0.3 #核心陆军防御效率
+            }
+        }
+
+    }
+}

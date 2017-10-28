@@ -1,0 +1,2143 @@
+focus_tree = {
+	id = YXC_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GXC
+		}
+	}
+	default = no
+	focus = {
+		id = GXC_0
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 1
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					599 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_1
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		x = 3
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					594 = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = infrastructure
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_8
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		x = 8
+		y = 0
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = POL_prepare_for_the_next_war
+							bonus = 0.5
+							uses = 2
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_22
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		x = 17
+		y = 0
+			ai_will_do = {
+					factor = 8
+				}
+			completion_reward = {
+					army_experience = 25
+					navy_experience = 25
+					air_experience = 25
+				}
+
+	}
+	focus = {
+		id = GXC_37
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		x = 36
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_political_power = 120
+				}
+
+	}
+	focus = {
+		id = GXC_20
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_0
+		}
+		prerequisite = {
+			focus = GXC_1
+		}
+		x = 2
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.5
+							uses = 2
+							category = industry
+						}
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = GXC_4
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_20
+		}
+		x = 1
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION_EXPANDED
+						}
+					random_owned_controlled_state = {
+							prioritize = { 599 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = POL_expansion_of_new_towns_1
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_2
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_4
+		}
+		x = 1
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 35
+							state = 594
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_19
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_2
+		}
+		x = 1
+		y = 4
+			completion_reward = {
+					add_tech_bonus = {
+							name = construction_tech
+							bonus = 0.5
+							uses = 2
+							category = construction_tech
+						}
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = GXC_3
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_20
+		}
+		x = 3
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION
+						}
+					random_owned_controlled_state = {
+							prioritize = { 599 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = POL_expansion_of_new_towns_1
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_6
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_3
+		}
+		x = 3
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = tungsten
+							amount = 35
+							state = 599
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_5
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_6
+		}
+		x = 3
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					every_state = {
+							limit = {
+									is_owned_by = GXC
+									is_core_of = GXC
+								}
+							add_extra_state_shared_building_slots = 6
+						}
+				}
+			available = {
+					is_puppet = no
+					599 = {
+							is_owned_by = GXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_7
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_19
+			focus = GXC_5
+		}
+		x = 2
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					594 = {
+							add_building_construction = {
+									type = bunker
+									province = 4177
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 7137
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 10050
+									level = 5
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_45
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_7
+		}
+		x = 1
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = radar_tech_bonus
+							bonus = 0.5
+							uses = 2
+							category = radar_tech
+						}
+					add_political_power = -50
+				}
+
+	}
+	focus = {
+		id = GXC_46
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_7
+		}
+		x = 3
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = computer
+							bonus = 0.5
+							uses = 2
+							category = computing_tech
+						}
+					add_political_power = -50
+				}
+
+	}
+	focus = {
+		id = GXC_9
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_8
+		}
+		x = 8
+		y = 1
+			completion_reward = {
+					add_ideas = partial_economic_mobilisation
+				}
+
+	}
+	focus = {
+		id = GXC_10
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_9
+		}
+		prerequisite = {
+			focus = GXC_9
+		}
+		x = 6
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_103
+				}
+
+	}
+	focus = {
+		id = GXC_13
+		icon = GFX_goal_rhineland
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_10
+		}
+		x = 6
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_104
+				}
+
+	}
+	focus = {
+		id = GXC_14
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_13
+		}
+		x = 6
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_105
+				}
+
+	}
+	focus = {
+		id = GXC_11
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_9
+		}
+		prerequisite = {
+			focus = GXC_9
+		}
+		x = 8
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = limited_conscription
+				}
+
+	}
+	focus = {
+		id = GXC_12
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_11
+		}
+		x = 8
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_101
+				}
+
+	}
+	focus = {
+		id = GXC_15
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_12
+		}
+		x = 8
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_102
+				}
+
+	}
+	focus = {
+		id = GXC_16
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_9
+		}
+		x = 10
+		y = 2
+			ai_will_do = {
+					factor = 8
+				}
+			completion_reward = {
+					army_experience = 25
+					add_tech_bonus = {
+							name = land_doc_bonus
+							bonus = 0.75
+							uses = 1
+							category = land_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_17
+		icon = GFX_goal_generic_cavalry
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_16
+		}
+		x = 10
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_106
+				}
+
+	}
+	focus = {
+		id = GXC_18
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_17
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_research_slot = 1
+				}
+
+	}
+	focus = {
+		id = GXC_21
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_14
+		}
+		prerequisite = {
+			focus = GXC_15
+		}
+		prerequisite = {
+			focus = GXC_18
+		}
+		x = 8
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_107
+					remove_ideas = GXC_113
+				}
+
+	}
+	focus = {
+		id = GXC_23
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_22
+		}
+		x = 13
+		y = 1
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					594 = {
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = air_base
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					594 = {
+							is_controlled_by = GXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_25
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_23
+		}
+		x = 12
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							bonus = 0.5
+							uses = 2
+							technology = early_fighter
+							technology = fighter1
+							technology = fighter2
+							technology = fighter3
+							technology = heavy_fighter1
+							technology = heavy_fighter2
+							technology = heavy_fighter3
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_26
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_23
+		}
+		x = 14
+		y = 2
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					air_experience = 30
+					add_tech_bonus = {
+							name = air_doc_bonus
+							bonus = 0.50
+							uses = 2
+							category = air_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_27
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_25
+		}
+		prerequisite = {
+			focus = GXC_26
+		}
+		x = 13
+		y = 3
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = fighter_equipment_0
+							amount = 800
+							producer = ENG
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_28
+		icon = GFX_goal_generic_air_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_27
+		}
+		x = 12
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_108
+				}
+
+	}
+	focus = {
+		id = GXC_29
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_27
+		}
+		x = 14
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION_EXPANDED
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_30
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_28
+		}
+		prerequisite = {
+			focus = GXC_29
+		}
+		x = 13
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_109
+				}
+
+	}
+	focus = {
+		id = GXC_41
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_22
+		}
+		x = 17
+		y = 1
+			completion_reward = {
+					add_tech_bonus = {
+							name = motorized_bonus
+							bonus = 0.5
+							technology = motorised_infantry
+						}
+				}
+			bypass = {
+					has_tech = motorised_infantry
+				}
+
+	}
+	focus = {
+		id = GXC_40
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_41
+		}
+		x = 17
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.5
+							uses = 2
+							category = armor
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_43
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_40
+		}
+		x = 16
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_artillery_bonus
+							bonus = 0.5
+							uses = 1
+							category = artillery
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_42
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_40
+		}
+		x = 18
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.25
+							uses = 2
+							category = infantry_weapons
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_44
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_43
+			focus = GXC_42
+		}
+		x = 17
+		y = 5
+			completion_reward = {
+					add_tech_bonus = {
+							name = special_forces_bonus
+							bonus = 0.5
+							uses = 2
+							technology = paratroopers
+							technology = paratroopers2
+							technology = marines
+							technology = marines2
+							technology = tech_mountaineers
+							technology = tech_mountaineers2
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_24
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_22
+		}
+		x = 22
+		y = 1
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 2
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					any_owned_state{is_coastal = yes
+					}cancel_if_invalid = yes
+					continue_if_invalid = no
+					available_if_capitulated = no
+				}
+
+	}
+	focus = {
+		id = GXC_31
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_24
+		}
+		x = 22
+		y = 2
+			completion_reward = {
+					add_tech_bonus = {
+							name = infantry_weapons_bonus
+							bonus = 0.5
+							uses = 2
+							category = naval_doctrine
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_32
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_31
+		}
+		x = 20
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = FRA_capital_ship_focus
+							bonus = 0.5
+							uses = 2
+							category = bb_tech
+							category = bc_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_33
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_31
+		}
+		x = 22
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = POL_study_foreign_built_ships
+							bonus = 0.5
+							uses = 1
+							category = dd_tech
+						}
+					add_tech_bonus = {
+							name = POL_a_cruiser_navy
+							bonus = 0.5
+							uses = 1
+							category = cl_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_34
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_31
+		}
+		x = 24
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_tech_bonus = {
+							name = POL_import_submarine_technology
+							bonus = 0.5
+							uses = 2
+							category = ss_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_35
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_32
+			focus = GXC_33
+			focus = GXC_34
+		}
+		x = 22
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_110
+				}
+
+	}
+	focus = {
+		id = GXC_36
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_35
+		}
+		x = 22
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_111
+				}
+
+	}
+	focus = {
+		id = GXC_48
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_30
+			focus = GXC_44
+			focus = GXC_36
+		}
+		x = 17
+		y = 6
+			completion_reward = {
+					add_ideas = GXC_112
+					remove_ideas = GXC_115
+				}
+
+	}
+	focus = {
+		id = GXC_39
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_37
+		}
+		mutually_exclusive = {
+			focus = GXC_38
+		}
+		x = 30
+		y = 1
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 10
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_ideas = volunteer_corps_focus
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = CHI
+							has_government = communism
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_49
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_39
+		}
+		mutually_exclusive = {
+			focus = GXC_57
+		}
+		x = 28
+		y = 2
+			completion_reward = {
+					add_ideas = democratic_influence
+					CHI = {
+							end_puppet = GXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_50
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_49
+		}
+		x = 27
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = GXC_114
+				}
+
+	}
+	focus = {
+		id = GXC_53
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_49
+		}
+		x = 29
+		y = 3
+			completion_reward = {
+					give_guarantee = FRA
+					add_national_unity = 0.05
+					FRA = {
+							give_guarantee = GXC
+							diplomatic_relation = {
+									country = GXC
+									relation = non_aggression_pact
+								}
+						}
+					set_rule = {
+							can_send_volunteers = yes
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = FRA
+						}
+					is_puppet = no
+				}
+
+	}
+	focus = {
+		id = GXC_55
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_53
+		}
+		x = 29
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					599 = {
+							add_building_construction = {
+									type = bunker
+									province = 7168
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 4152
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 10404
+									level = 5
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_54
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_55
+		}
+		x = 29
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					GXC = {
+							transfer_state = 671
+						}
+					GXC = {
+							add_state_core = 671
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_57
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_39
+		}
+		mutually_exclusive = {
+			focus = GXC_49
+		}
+		x = 34
+		y = 2
+			completion_reward = {
+					give_guarantee = CHI
+					add_national_unity = 0.05
+					CHI = {
+							give_guarantee = GXC
+							end_puppet = GXC
+							diplomatic_relation = {
+									country = GXC
+									relation = non_aggression_pact
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = CHI
+						}
+					is_puppet = no
+				}
+
+	}
+	focus = {
+		id = GXC_58
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_57
+		}
+		x = 32
+		y = 3
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.75
+							uses = 1
+							category = industry
+						}
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_60
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_58
+		}
+		x = 31
+		y = 4
+			completion_reward = {
+					add_ideas = GXC_118
+				}
+
+	}
+	focus = {
+		id = GXC_61
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_58
+		}
+		x = 33
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					599 = {
+							add_building_construction = {
+									type = bunker
+									province = 7168
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 4152
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = bunker
+									province = 10404
+									level = 5
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = anti_air_building
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_62
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_60
+		}
+		prerequisite = {
+			focus = GXC_61
+		}
+		x = 32
+		y = 5
+			completion_reward = {
+					add_ideas = GXC_116
+				}
+
+	}
+	focus = {
+		id = GXC_59
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_57
+		}
+		x = 36
+		y = 3
+			completion_reward = {
+					CHI = {
+							add_to_faction = GXC
+						}
+				}
+			available = {
+					OR = {
+							AND = {
+									has_war_with = JAP
+									NOT = {
+											has_war_with = CHI
+										}
+									CHI = {
+											has_war_with = JAP
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_63
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_59
+		}
+		x = 35
+		y = 4
+			completion_reward = {
+					CHI = {
+							add_equipment_to_stockpile = {
+									type = infantry_equipment_0
+									amount = 5000
+									producer = GXC
+								}
+						}
+					GXC = {
+							add_manpower = 5000
+						}
+				}
+			available = {
+					OR = {
+							AND = {
+									has_war_with = JAP
+									is_in_faction_with = CHI
+									NOT = {
+											has_war_with = CHI
+										}
+									CHI = {
+											has_war_with = JAP
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_64
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_59
+		}
+		x = 37
+		y = 4
+			completion_reward = {
+					CHI = {
+							add_political_power = 25
+						}
+					hidden_effect = {
+							load_oob = "GXC_disizhanqu"
+						}
+					custom_effect_tooltip = 得到正在第四战区内作战的10个步兵师和2个步兵旅
+				}
+			available = {
+					OR = {
+							AND = {
+									has_war_with = JAP
+									is_in_faction_with = CHI
+									NOT = {
+											has_war_with = CHI
+										}
+									CHI = {
+											has_war_with = JAP
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_65
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_63
+		}
+		prerequisite = {
+			focus = GXC_64
+		}
+		x = 36
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION_EXPANDED
+						}
+				}
+			available = {
+					OR = {
+							AND = {
+									has_war_with = JAP
+									is_in_faction_with = CHI
+									NOT = {
+											has_war_with = CHI
+										}
+									CHI = {
+											has_war_with = JAP
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_67
+		icon = GFX_goal_generic_army_artillery
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_65
+			focus = GXC_62
+		}
+		x = 34
+		y = 6
+			completion_reward = {
+					add_ideas = GXC_117
+				}
+
+	}
+	focus = {
+		id = GXC_38
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_37
+		}
+		mutually_exclusive = {
+			focus = GXC_39
+		}
+		x = 42
+		y = 1
+			ai_will_do = {
+					factor = 5
+				}
+			completion_reward = {
+					add_ideas = deterrence
+					add_ideas = ideological_fanaticism_focus
+				}
+
+	}
+	focus = {
+		id = GXC_75
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_38
+		}
+		mutually_exclusive = {
+			focus = GXC_76
+		}
+		x = 40
+		y = 2
+			ai_will_do = {
+					factor = 5
+					modifier = {
+							factor = 0
+							is_historical_focus_on = yes
+						}
+				}
+			completion_reward = {
+					add_ideas = communist_influence
+				}
+
+	}
+	focus = {
+		id = GXC_70
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_75
+		}
+		x = 39
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 599 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 4
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION_EXPANDED
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_68
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_70
+		}
+		x = 39
+		y = 4
+			completion_reward = {
+					CHI = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 45
+								}
+						}
+					YUN = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 60
+								}
+						}
+					YXC = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 60
+								}
+						}
+					XSM = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 60
+								}
+						}
+					SHX = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 60
+								}
+						}
+					TIB = {
+							add_timed_idea = {
+									idea = communist_influence
+									days = 60
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_71
+		icon = GFX_goal_generic_trade
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_75
+		}
+		x = 41
+		y = 3
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = steel
+							amount = 15
+							state = 594
+						}
+					add_resource = {
+							type = oil
+							amount = 15
+							state = 594
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_69
+		icon = GFX_goal_support_fourth_int
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_71
+		}
+		x = 41
+		y = 4
+			completion_reward = {
+					RAJ = {
+							add_ideas = communist_influence
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_73
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_68
+		}
+		prerequisite = {
+			focus = GXC_69
+		}
+		x = 40
+		y = 5
+			completion_reward = {
+					add_ideas = GXC_119
+					CHI = {
+							end_puppet = GXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_72
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_73
+		}
+		mutually_exclusive = {
+			focus = GXC_74
+		}
+		x = 41
+		y = 6
+			completion_reward = {
+					SOV = {
+							add_to_faction = GXC
+						}
+				}
+			available = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = GXC_76
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_38
+		}
+		mutually_exclusive = {
+			focus = GXC_75
+		}
+		x = 45
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					add_ideas = fascist_influence
+					CHI = {
+							end_puppet = GXC
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_77
+		icon = GFX_goal_generic_military_deal
+		cost = 0.00
+		prerequisite = {
+			focus = GXC_76
+		}
+		x = 44
+		y = 3
+			completion_reward = {
+					give_guarantee = GER
+					add_national_unity = 0.05
+					GER = {
+							give_guarantee = GXC
+							diplomatic_relation = {
+									country = GXC
+									relation = non_aggression_pact
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = GER
+						}
+					is_puppet = no
+				}
+
+	}
+	focus = {
+		id = GXC_80
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_77
+		}
+		x = 44
+		y = 4
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					GER = {
+							add_political_power = 50
+						}
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 5000
+							producer = GER
+						}
+					add_equipment_to_stockpile = {
+							type = artillery_equipment_1
+							amount = 1000
+							producer = GER
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_81
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_80
+		}
+		x = 44
+		y = 5
+			completion_reward = {
+					GER = {
+							add_political_power = 125
+						}
+					hidden_effect = {
+							load_oob = "GXC_dexiehsi"
+						}
+					custom_effect_tooltip = 一支由德国志愿军组成的机械化步兵师在南宁待命
+				}
+
+	}
+	focus = {
+		id = GXC_82
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_79
+		}
+		x = 46
+		y = 5
+			ai_will_do = {
+					factor = 1
+				}
+			completion_reward = {
+					add_resource = {
+							type = oil
+							amount = 30
+							state = 599
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_74
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_73
+		}
+		mutually_exclusive = {
+			focus = GXC_72
+		}
+		x = 39
+		y = 6
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					set_rule = {
+							can_create_factions = yes
+						}
+					create_faction = xinanrenminzhengfu
+					hidden_effect = {
+							news_event = {
+									hours = 6
+									id = news.214
+								}
+						}
+				}
+			available = {
+					is_puppet = no
+					is_in_faction = no
+				}
+
+	}
+	focus = {
+		id = GXC_51
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_50
+		}
+		x = 27
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					random_owned_controlled_state = {
+							prioritize = { 594 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = POL_CENTRAL_INDUSTRIAL_REGION
+						}
+					random_owned_controlled_state = {
+							prioritize = { 599 }
+							limit = {
+									free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							set_state_flag = POL_expansion_of_new_towns_1
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_52
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_51
+		}
+		x = 27
+		y = 5
+			completion_reward = {
+					random_owned_controlled_state = {
+							limit = {
+									is_coastal = yes
+									free_building_slots = {
+											building = dockyard
+											size > 2
+											include_locked = yes
+										}
+								}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+						}
+				}
+			available = {
+					any_owned_state{is_coastal = yes
+					}cancel_if_invalid = yes
+					continue_if_invalid = no
+					available_if_capitulated = no
+				}
+
+	}
+	focus = {
+		id = GXC_47
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_21
+		}
+		x = 8
+		y = 6
+			completion_reward = {
+					add_tech_bonus = {
+							name = decryption_tech
+							bonus = 0.5
+							uses = 2
+							category = decryption_tech
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_56
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_52
+			focus = GXC_54
+		}
+		x = 28
+		y = 6
+			completion_reward = {
+					ENG = {
+							add_to_faction = GXC
+						}
+				}
+			available = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = GXC_78
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 0.00
+		prerequisite = {
+			focus = GXC_76
+		}
+		x = 46
+		y = 3
+			completion_reward = {
+					give_guarantee = JAP
+					add_national_unity = 0.05
+					JAP = {
+							give_guarantee = GXC
+							diplomatic_relation = {
+									country = GXC
+									relation = non_aggression_pact
+								}
+						}
+				}
+			available = {
+					NOT = {
+							has_war_with = JAP
+						}
+					is_puppet = no
+				}
+
+	}
+	focus = {
+		id = GXC_79
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_78
+		}
+		x = 46
+		y = 4
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = fighter_equipment_0
+							amount = 500
+							producer = JAP
+						}
+					add_tech_bonus = {
+							name = light_fighter_bonus
+							bonus = 0.25
+							uses = 1
+							category = light_fighter
+						}
+				}
+
+	}
+	focus = {
+		id = GXC_83
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_81
+			focus = GXC_82
+		}
+		x = 45
+		y = 6
+			completion_reward = {
+					GER = {
+							add_to_faction = GXC
+						}
+				}
+			available = {
+					is_subject = no
+				}
+
+	}
+	focus = {
+		id = GXC_84
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = GXC_56
+			focus = GXC_67
+			focus = GXC_74
+			focus = GXC_72
+			focus = GXC_83
+		}
+		x = 36
+		y = 7
+			completion_reward = {
+					if = {
+							limit = {
+									CHI = {
+											exists = yes
+										}
+								}
+							create_wargoal = {
+									type = annex_everything
+									target = CHI
+								}
+						}
+					if = {
+							limit = {
+									PRC = {
+											exists = yes
+										}
+								}
+							create_wargoal = {
+									type = annex_everything
+									target = PRC
+								}
+						}
+					if = {
+							limit = {
+									YUN = {
+											exists = yes
+										}
+								}
+							create_wargoal = {
+									type = annex_everything
+									target = YUN
+								}
+						}
+					if = {
+							limit = {
+									YXC = {
+											exists = yes
+										}
+								}
+							create_wargoal = {
+									type = annex_everything
+									target = YXC
+								}
+						}
+					every_state = {
+							limit = {
+									is_core_of = CHI
+								}
+							add_core_of = GXC
+						}
+				}
+			available = {
+					has_war = no
+				}
+
+	}
+}

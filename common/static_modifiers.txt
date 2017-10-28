@@ -1,0 +1,367 @@
+# All global modifiers are here. They are applied from certain game-features.
+# Effects are fully scriptable here.
+# These names can NOT be removed or changes, as the code uses them....
+
+weather_rain_light = { # on Region 
+	air_detection = -0.1
+	naval_detection = -0.1
+	naval_hit_chance = -0.05
+	naval_speed_factor = -0.05
+	naval_strike = -0.2
+	air_accidents = 0.1
+	air_mission_efficiency = -0.1
+
+	local_org_regain = -0.05
+}
+weather_rain_heavy = { # on Region 
+	air_detection = -0.2
+	naval_detection = -0.2
+	naval_hit_chance = -0.1
+	naval_speed_factor = -0.1
+	carrier_traffic = -1.0
+	air_accidents = 0.3
+	air_bombing_targetting = -0.5
+	local_org_regain = -0.2
+	air_mission_efficiency = -0.3
+}
+weather_snow = { # on Region 
+	local_supplies = -0.05
+	air_detection = -0.15
+	naval_detection = -0.15
+	naval_hit_chance = -0.05
+	naval_speed_factor = -0.05
+	naval_strike = -0.3
+	air_accidents = 0.1
+	local_org_regain = -0.05
+	air_mission_efficiency = -0.1
+}
+weather_blizzard = { # on Region 
+	local_supplies = -0.35
+	air_detection = -0.3
+	naval_detection = -0.3
+	naval_hit_chance = -0.1
+	naval_speed_factor = -0.1
+	carrier_traffic = -1.0
+	air_accidents = 0.3
+	air_bombing_targetting = -0.7
+	local_org_regain = -0.3
+	air_mission_efficiency = -0.3
+}
+weather_sandstorm = { # on Region 
+	local_supplies = -0.2
+	air_detection = -0.9
+	air_accidents = 0.6
+	air_bombing_targetting = -1
+	local_org_regain = -0.5
+	air_mission_efficiency = -0.5
+}
+weather_mud = { # on Province
+	local_supplies = -0.2
+	attrition = 0.7
+	army_speed_factor = -1.0
+	army_attack_factor = -0.6
+}
+weather_extreme_cold = { # on Province
+	local_supplies = -0.2
+	winter_attrition = 0.3
+	dig_in_speed_factor = -0.6
+	local_org_regain = -0.05
+	army_speed_factor = -0.5
+	army_attack_factor = -0.5
+}
+weather_very_cold = { # on Province
+	local_supplies = -0.05
+	winter_attrition = 0.2
+	dig_in_speed_factor = -0.4
+	army_speed_factor = -0.35
+	army_attack_factor = -0.35
+}
+weather_very_hot = { # on Province
+	local_supplies = -0.05
+	heat_attrition = 0.1
+}
+weather_extreme_hot = { # on Province
+	local_supplies = -0.2
+	heat_attrition = 0.2
+	local_org_regain = -0.05
+}
+weather_ground_snow_medium = { # on Province
+	local_supplies = -0.1
+	army_speed_factor = -0.2
+	army_attack_factor = -0.25
+	
+}
+weather_ground_snow_high = { # on Province
+	local_supplies = -0.2
+	army_speed_factor = -0.3
+	local_org_regain = -0.05
+	army_attack_factor = -0.4
+}
+
+night = { # On province. Multiplied by amount of darkness.
+	naval_hit_chance = -0.25
+	carrier_traffic = -1.0
+	air_bombing_targetting = -0.5
+}
+# Occupation Policies
+occupation_policy_1 = { # Gentlest
+	resistance_tick = -0.95
+	local_resources = -0.5
+	local_manpower = -0.7
+	local_factories = -0.8
+	occupation_cost = 0.01
+}
+occupation_policy_2 = { # Gentle
+	resistance_tick = -0.7
+	local_resources = -0.3
+	local_manpower = -0.8
+	local_factories = -0.6
+	occupation_cost = 0.02
+}
+occupation_policy_3 = { # Harsh
+	resistance_tick = -0.4
+	local_resources = -0.1
+	local_manpower = -0.9
+	local_factories = -0.4
+	occupation_cost = 0.03
+}
+occupation_policy_4 = { # Harshest
+	#resistance_tick = 0.0
+	#local_resources = 0.0
+	local_manpower = -1.0
+	local_factories = -0.1
+	occupation_cost = 0.04
+}
+
+# The following is multiplied by local resistance strength.
+resistance_effect = {
+	local_supplies = -0.4
+	local_intel_to_enemies = 1
+	local_factory_sabotage = 0.5
+	attrition = 0.25
+}
+
+# On States
+non_core = {
+	local_building_slots_factor = -0.4
+	local_factories = -0.25
+	local_resources = -0.15
+	local_supplies = -0.05
+}
+
+
+
+lacking_consumer_goods = {
+	research_time_factor = 0.25
+	political_power_factor = -0.25
+}
+
+gain_focus = {
+	political_power_cost = 0.80
+} 
+
+#license production
+
+ROM_license_german_equipment = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 20 #more to AI acceptance value.
+	license_production_speed = 0.25 #speed  increase for being a license
+	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level 
+}
+
+ROM_foreign_motor_company = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 20 #more to AI acceptance value.
+	license_production_speed = 0.1 #speed  increase for being a license
+	license_tech_difference_speed = 0.1 #less cost increase for each tech level between the license and own tech level 
+}
+
+HUN_dynastic_ties_license = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 50 #more to AI acceptance value.
+
+}
+
+YUG_western_license = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	ai_license_acceptance = 20 #more to AI acceptance value.
+
+}
+
+HUN_stubborn_fools = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { is_in_faction_with = ROOT }
+		}
+	}
+	ai_license_acceptance = -50 #penalty to AI acceptance
+
+}
+
+ROM_military_modernization = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 60 #more to AI acceptance value.
+	license_production_speed = 0.25 #speed  increase for being a license
+	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level 
+}
+
+free_license = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	license_purchase_cost = 0 #no base cost
+}
+
+# Difficulty modifiers
+
+diff_easy_player = {
+	production_factory_max_efficiency_factor = 0.1
+	research_time_factor = -0.05
+	political_power_factor = 0.1
+	justify_war_goal_time = -0.20
+	experience_gain_factor = 1.00
+}
+
+diff_normal_player = {
+	production_factory_max_efficiency_factor = -0.06
+	political_power_factor = -0.1
+	industrial_capacity_factory = -0.06
+	max_planning = -0.2
+	army_core_attack_factor = 0.1
+	army_core_defence_factor = 0.1
+	org_loss_when_moving = 0.1
+	research_time_factor = 0.1	
+	experience_gain_air_factor = 0.05
+	experience_gain_army_factor = 0.05
+	experience_gain_navy_factor = 0.05
+	experience_gain_army_unit_factor = 0.05
+	experience_gain_navy_unit_factor = 0.05
+	minimum_training_level = 0.2
+	experience_gain_factor = 0.75	
+}
+
+#diff_normal_player = {	# For testing with human_ai
+#
+#	research_time_factor = -0.15
+#	production_factory_max_efficiency_factor = 0.30
+#	supply_consumption_factor = -0.3
+#	attrition = -0.85
+#}
+diff_hard_player = {
+	production_factory_max_efficiency_factor = -0.15
+	research_time_factor = 0.2
+	political_power_factor = -0.2
+	industrial_capacity_factory = -0.3
+	industrial_capacity_dockyard = -0.3 #船坞产能
+	army_org_Factor = -0.1 #组织度加成
+	army_attack_factor = -0.2
+	army_defence_factor = -0.2
+	justify_war_goal_time = -0.20
+	line_change_production_efficiency_factor = -0.05 #换线生产产出率
+	production_factory_efficiency_gain_factor = -0.05 #生产效率增加速度
+	minimum_training_level = 0.4
+	experience_gain_factor = 0.50
+}
+
+diff_easy_ai = {
+	production_factory_max_efficiency_factor = 0.20
+	supply_consumption_factor = -0.1 #补给使用
+	no_supply_grace = 48 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.3 #缺乏补给的影响
+	attrition = -0.7
+	experience_gain_factor = 0.50
+}
+
+diff_normal_ai = {
+#	research_time_factor = -0.05
+	production_factory_max_efficiency_factor = 0.05
+	no_supply_grace = 96 #无补给时可以额外坚持的小时数
+	supply_consumption_factor = -0.15 #补给使用
+	out_of_supply_factor = -0.6 #缺乏补给的影响
+	army_attack_factor = 0.15
+	army_defence_factor = 0.15
+	army_org_Factor = 0.1 #组织度加成
+	attrition = -0.8
+	minimum_training_level = 0.1
+	experience_gain_factor = 0.75
+}
+
+diff_hard_ai = {
+	#research_time_factor = -0.1
+	production_factory_max_efficiency_factor = 0.15 #生产上限
+	supply_consumption_factor = -0.2 #补给使用
+	no_supply_grace = 144 #无补给时可以额外坚持的小时数
+	out_of_supply_factor = -0.9 #缺乏补给的影响
+	army_attack_factor = 0.3
+	army_defence_factor = 0.3
+	army_org_Factor = 0.2 #组织度加成
+	attrition = -0.9 #装备损耗
+	line_change_production_efficiency_factor = 0.05 #换线生产产出率
+	production_factory_efficiency_gain_factor = 0.05 #生产效率增加速度
+	industrial_capacity_factory = 0.1 #工厂产出
+	industrial_capacity_dockyard = 0.1 #船坞产能
+	minimum_training_level = 0.2
+	experience_gain_factor = 1.00
+}
+diff_strong_ai_generic = {
+
+	dig_in_speed_factor = 0.25
+	army_morale_factor = 0.15
+	research_time_factor = -0.15
+	supply_consumption_factor = -0.15
+	attrition = -0.7
+	army_core_attack_factor = 0.3
+	army_core_defence_factor = 0.3
+	line_change_production_efficiency_factor = 0.2
+	production_factory_efficiency_gain_factor = 1
+	training_time_army_factor = -0.3
+	special_forces_attack_factor = 0.2
+	enemy_partisan_effect = -0.05
+
+ air_attack_factor = 0.1
+        air_defence_factor = 0.1
+        navy_capital_ship_attack_factor = 0.1        
+        navy_capital_ship_defence_factor = 0.1
+        navy_screen_attack_factor = 0.1
+        navy_screen_defence_factor = 0.1
+        navy_submarine_attack_factor = 0.1
+        navy_submarine_defence_factor = 0.1
+        navy_anti_air_attack_factor = 0.1
+	# xp gain
+	experience_gain_air_factor = 0.25
+	experience_gain_army_factor = 0.25
+	experience_gain_navy_factor = 0.25
+	experience_gain_army_unit_factor = 0.10
+	experience_gain_navy_unit_factor = 0.10
+}
+### EOF ###

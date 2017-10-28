@@ -1,0 +1,1283 @@
+focus_tree = {
+	id = SHX_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SHX
+		}
+	}
+
+#山西省政十年建设计划案
+	focus = {
+		id = SHX_ShiNianJianShe
+		icon = GFX_goal_generic_position_armies
+		x = 3
+		y = 0
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+#造产救国
+	focus = {
+		id = SHX_ZaoChanJiuGuo
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = SHX_ShiNianJianShe }
+		x = 1
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+#扶持晋商
+	focus = {
+		id = SHX_FuChiJinShang
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SHX_ZaoChanJiuGuo }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		x = 0
+		y = 2
+		cost = 6
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+	}
+#扶持票号
+	focus = {
+		id = SHX_FuChiPiaoHao
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SHX_FuChiJinShang }
+		available = {	621 = { is_owned_and_controlled_by = SHX }	}
+		x = 0
+		y = 3
+		cost = 6
+		completion_reward = {
+			621 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+#西北实业公司
+	focus = {
+		id = SHX_XiBeiShiYeGongSi
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SHX_FuChiPiaoHao }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		available = {	621 = { is_owned_and_controlled_by = SHX }	}
+
+		x = 0
+		y = 4
+		cost = 6
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			621 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+
+			}
+		}
+	}
+
+#山西陆军修械所
+	focus = {
+		id = SHX_ShanXiLuJunXiuXieSuo
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SHX_ZaoChanJiuGuo }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		x = 2
+		y = 2
+		cost = 6
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+#山西军工实习厂
+	focus = {
+		id = SHX_ShanXiJunGong
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SHX_ShanXiLuJunXiuXieSuo }
+		available = {	621 = { is_owned_and_controlled_by = SHX }	}
+		x = 2
+		y = 3
+		cost = 6
+		completion_reward = {
+			621 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+#太原兵工厂
+	focus = {
+		id = SHX_TaiYuanBingGongChang
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SHX_ShanXiJunGong }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		available = {	621 = { is_owned_and_controlled_by = SHX }	}
+		x = 2
+		y = 4
+		cost = 6
+		completion_reward = {
+			615 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			621 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+#兵器研究委员会
+	focus = {
+		id = SHX_BingQiWeiYuanHui
+		icon = GFX_focus_research
+		prerequisite = { focus = SHX_XiBeiShiYeGongSi }
+		prerequisite = { focus = SHX_TaiYuanBingGongChang }
+		x = 1
+		y = 5
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+				
+			
+		}
+	}
+#电子研究
+	focus = {
+		id = SHX_DianZiYanJiu
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = SHX_BingQiWeiYuanHui }
+		x = 1
+		y = 6
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics				
+			}
+		}
+	}
+
+#建设西北
+	focus = {
+		id = SHX_JianSheXiBei
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SHX_ShiNianJianShe }
+		x = 5
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_ideas = AnJuLeYe
+		}
+	}
+#山西保晋铁厂
+	focus = {
+		id = SHX_ShanXiBaoJinTieChang
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SHX_TongPuTieLu }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		x = 4
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 615
+			}
+		}
+	}
+#育才炼钢厂
+	focus = {
+		id = SHX_YuCaiLianGangChang
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SHX_ShanXiBaoJinTieChang }
+		x = 4
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 615
+			}
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 615
+			}
+		}
+	}
+#同蒲铁路管理局
+	focus = {
+		id = SHX_TongPuTieLu
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SHX_JianSheXiBei }
+		available = {	615 = { is_owned_and_controlled_by = SHX }	}
+		available = {	621 = { is_owned_and_controlled_by = SHX }	}
+		x = 4
+		y = 2
+		cost = 6
+		completion_reward = {
+			615 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			621 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+#劝农、劝桑
+	focus = {
+		id = SHX_QuanNongQuanSang
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SHX_JianSheXiBei }
+		x = 6
+		y = 2
+		cost = 6
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 12
+				state = 621
+			}
+		}
+	}
+#乡学教育
+	focus = {
+		id = SHX_XiangXueJiaoYu
+		icon = GFX_focus_research
+		prerequisite = { focus = SHX_QuanNongQuanSang }
+		x = 6
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+#中的哲学
+	focus = {
+		id = SHX_ZhongDiZheXue
+		icon = GFX_goal_generic_national_unity
+		x = 11
+		y = 0
+		cost = 0.8
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+#铜元局
+	focus = {
+		id = SHX_TongYuanJu
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = SHX_ZhongDiZheXue }
+		x = 8
+		y = 1
+		cost = 6
+		completion_reward = {
+		add_political_power = 50
+			add_ideas = ZiZhuTongYuan
+		}
+	}
+
+#商人是社会的中坚
+	focus = {
+		id = SHX_ShangRenZhongJian
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SHX_JinYanFanYan }
+		x = 8
+		y = 5
+		cost = 6
+		completion_reward = {
+		add_political_power = 50
+			add_ideas = JinShangPiaoXingTianXia
+		}
+	}
+#禁烟？贩烟？
+	focus = {
+		id = SHX_JinYanFanYan
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = SHX_TongYuanJu }
+		x = 8
+		y = 3
+		cost = 6
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = FanYanChouXiang
+		add_ideas = YaPianFanLan
+		}
+	}
+#抗日
+	focus = {
+		id = SHX_KangRi
+		icon = GFX_goal_generic_major_war
+		mutually_exclusive = {focus = SHX_HeRi}
+		prerequisite = { focus = SHX_ZhongDiZheXue }
+		x = 12
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_political_power = 100
+			add_national_unity = 0.02
+			set_country_flag = SHX_KangRi
+		}
+	}
+#和日
+	focus = {
+		id = SHX_HeRi
+		icon = GFX_goal_generic_attack_allies
+		mutually_exclusive = {focus = SHX_KangRi}
+		prerequisite = { focus = SHX_ZhongDiZheXue }
+		x = 14
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_political_power = 100
+			add_national_unity = -0.02
+		}
+	}
+#联共
+	focus = {
+		id = SHX_LianGong
+		icon = GFX_goal_molotov_ribbentrop_pact
+		mutually_exclusive = {focus = SHX_YongJiang}
+		prerequisite = { focus = SHX_KangRi }
+		available = {
+        	has_war_with = JAP 
+        	has_defensive_war = yes
+        	is_puppet = yes
+				}
+		x = 10
+		y = 2
+		cost = 0.8
+		completion_reward = {
+			PRC = {
+				puppet = SHX
+			}
+		add_ideas = LianGongGouHe
+		}
+	}
+#决死队
+	focus = {
+		id = SHX_JueSiDui
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SHX_LianGong }
+		x = 10
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_ideas = JueSiDui
+		}
+	}
+#拒蒋
+	focus = {
+		id = SHX_JuJiang
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SHX_NanJingJiShu }
+		x = 12
+		y = 4
+		cost = 6
+		completion_reward = {
+			remove_ideas = NanJingJiShu
+			add_ideas = XiShouNanJingJiShu
+		}
+	}
+
+#拥蒋
+	focus = {
+		id = SHX_YongJiang
+		icon = GFX_goal_generic_military_deal
+		mutually_exclusive = {focus = SHX_LianGong}
+		prerequisite = { focus = SHX_KangRi }
+		available = {
+        	has_war_with = JAP 
+        	has_defensive_war = yes
+        	is_puppet = yes
+				}
+		x = 12
+		y = 2
+		cost = 0.8
+		completion_reward = {
+			CHI = {
+				puppet = SHX
+			}
+		add_ideas = YongJiangGouHe
+		}
+	}
+#南京技术
+	focus = {
+		id = SHX_NanJingJiShu
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SHX_YongJiang }
+		x = 12
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_ideas = NanJingJiShu
+		}
+	}
+#反共
+	focus = {
+		id = SHX_FanGong
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SHX_JueSiDui }
+		x = 10
+		y = 4
+		cost = 6
+		completion_reward = {
+			remove_ideas = JueSiDui
+			add_ideas = ShanXiJueSiTuan
+		}
+	}
+#绥靖-太原密议
+	focus = {
+		id = SHX_SuiJing
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SHX_HeRi }
+		available = {
+        	has_war_with = JAP 
+        	has_defensive_war = yes
+        	is_puppet = yes
+				}
+		x = 14
+		y = 2
+		cost = 0.8
+		completion_reward = {
+			JAP = {
+				puppet = SHX
+			}
+		add_national_unity = -0.02
+		add_ideas = SuiJingGouHe
+		}
+	}
+#师夷长技
+	focus = {
+		id = SHX_ShiYiChangJi
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SHX_SuiJing }
+		x = 14
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_ideas = ShiYiChangJi
+						615 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			621 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			615 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			621 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+#我们需要独立的山西
+	focus = {
+		id = SHX_XuYaoDuLi
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SHX_FanGong	focus = SHX_JuJiang	focus = SHX_ShiYiChangJi }
+		available = {
+
+			}
+
+		x = 12
+		y = 5
+		cost = 6
+
+		completion_reward = {
+			JAP = {
+			end_puppet = SHX
+			}
+			CHI = {
+			end_puppet = SHX
+			}
+			PRC = {
+			end_puppet = SHX
+			}
+		remove_ideas = LianGongGouHe
+		remove_ideas = YongJiangGouHe
+		remove_ideas = SuiJingGouHe
+		set_politics = { ruling_party = neutrality elections_allowed = no }		
+		set_political_party = { ideology = neutrality popularity = 100 }
+		}
+	}
+#山西王
+	focus = {
+		id = SHX_ShanXiWang
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SHX_XuYaoDuLi }
+		prerequisite = { focus = SHX_ShangRenZhongJian }
+		x = 10
+		y = 6
+		cost = 6
+		completion_reward = {
+		remove_ideas =YaPianFanLan
+		add_ideas = ShanXiWang1
+		set_rule = {
+				can_create_factions = yes
+			}
+
+		}
+	}
+
+#家、国、天下
+	focus = {
+		id = SHX_JiaGuoTianXia
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SHX_ShanXiWang}
+		x = 10
+		y = 7
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+			608 = { add_core_of = SHX }
+			609 = { add_core_of = SHX }
+			610 = { add_core_of = SHX }
+			615 = { add_core_of = SHX }
+			616 = { add_core_of = SHX }
+			328 = { add_core_of = SHX }
+			717 = { add_core_of = SHX }
+			714 = { add_core_of = SHX }
+			612 = { add_core_of = SHX }
+			611 = { add_core_of = SHX }
+			614 = { add_core_of = SHX }
+			597 = { add_core_of = SHX }
+			622 = { add_core_of = SHX }
+			283 = { add_core_of = SHX }
+			616 = { add_core_of = SHX }
+			604 = { add_core_of = SHX }
+			618 = { add_core_of = SHX }
+			617 = { add_core_of = SHX }
+			287 = { add_core_of = SHX }
+			619 = { add_core_of = SHX }
+			322 = { add_core_of = SHX }
+			601 = { add_core_of = SHX }
+			605 = { add_core_of = SHX }
+			607 = { add_core_of = SHX }
+			620 = { add_core_of = SHX }
+			598 = { add_core_of = SHX }
+			606 = { add_core_of = SHX }
+			613 = { add_core_of = SHX }
+			596 = { add_core_of = SHX }
+			600 = { add_core_of = SHX }
+			602 = { add_core_of = SHX }
+			603 = { add_core_of = SHX }
+			325 = { add_core_of = SHX }
+			599 = { add_core_of = SHX }
+			593 = { add_core_of = SHX }
+			595 = { add_core_of = SHX }
+			594 = { add_core_of = SHX }
+			524 = { add_core_of = SHX }
+			591 = { add_core_of = SHX }
+			728 = { add_core_of = SHX }
+			729 = { add_core_of = SHX }
+			326 = { add_core_of = SHX }
+			329 = { add_core_of = SHX }
+
+			615 = { add_core_of = SHX }
+			621 = { add_core_of = SHX }
+			743 = { add_core_of = SHX }
+			753 = { add_core_of = SHX }
+			434 = { add_core_of = SHX }
+			746 = { add_core_of = SHX }
+			754 = { add_core_of = SHX }
+			755 = { add_core_of = SHX }
+			756 = { add_core_of = SHX }
+			757 = { add_core_of = SHX }
+			758 = { add_core_of = SHX }
+			759 = { add_core_of = SHX }
+			760 = { add_core_of = SHX }
+			761 = { add_core_of = SHX }
+			762 = { add_core_of = SHX }
+			763 = { add_core_of = SHX }
+			764 = { add_core_of = SHX }
+			765 = { add_core_of = SHX }
+			766 = { add_core_of = SHX }
+			767 = { add_core_of = SHX }
+			768 = { add_core_of = SHX }
+			769 = { add_core_of = SHX }
+			770 = { add_core_of = SHX }
+			771 = { add_core_of = SHX }
+			772 = { add_core_of = SHX }
+			773 = { add_core_of = SHX }
+			774 = { add_core_of = SHX }
+			775 = { add_core_of = SHX }
+			776 = { add_core_of = SHX }
+			777 = { add_core_of = SHX }
+			778 = { add_core_of = SHX }
+			779 = { add_core_of = SHX }
+			780 = { add_core_of = SHX }
+			781 = { add_core_of = SHX }
+			782 = { add_core_of = SHX }
+			783 = { add_core_of = SHX }
+			784 = { add_core_of = SHX }
+			785 = { add_core_of = SHX }
+			786 = { add_core_of = SHX }
+			787 = { add_core_of = SHX }
+			788 = { add_core_of = SHX }
+			789 = { add_core_of = SHX }
+			790 = { add_core_of = SHX }
+			791 = { add_core_of = SHX }
+			792 = { add_core_of = SHX }
+			793 = { add_core_of = SHX }
+			794 = { add_core_of = SHX }
+			795 = { add_core_of = SHX }
+			796 = { add_core_of = SHX }
+			797 = { add_core_of = SHX }
+			798 = { add_core_of = SHX }
+			799 = { add_core_of = SHX }
+			800 = { add_core_of = SHX }
+			801 = { add_core_of = SHX }
+			802 = { add_core_of = SHX }
+			803 = { add_core_of = SHX }
+			804 = { add_core_of = SHX }
+			805 = { add_core_of = SHX }
+			806 = { add_core_of = SHX }
+			807 = { add_core_of = SHX }
+			808 = { add_core_of = SHX }
+			809 = { add_core_of = SHX }
+			810 = { add_core_of = SHX }
+			811 = { add_core_of = SHX }
+			812 = { add_core_of = SHX }
+			813 = { add_core_of = SHX }
+			814 = { add_core_of = SHX }
+		}
+	}
+
+#重组晋绥军
+	focus = {
+		id = SHX_JinSuiJun
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 22
+		y = 0
+		cost = 6
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+#军人法政讲习所
+	focus = {
+		id = SHX_FaZhengJiangXiSuo
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = SHX_JinSuiJun }
+		x = 22
+		y = 1
+		cost = 6
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+#陆军讲武堂
+	focus = {
+		id = SHX_LuJunJiangWuTang
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SHX_FaZhengJiangXiSuo }
+		x = 22
+		y = 2
+		cost = 6
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+#陆军军政改革
+	focus = {
+		id = SHX_LuJunJunZhengGaiGe
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SHX_LuJunJiangWuTang }
+		x = 22
+		y = 4
+		cost = 6
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+#山地步兵特训
+	focus = {
+		id = SHX_ShanDiBuBingTeXun
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SHX_BaoJingAnMin }
+		x = 21
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+#研究摩托化
+	focus = {
+		id = SHX_YanJiuMoTuoHua
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SHX_JinSuiJun }
+		x = 24
+		y = 2
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+#装甲研究
+	focus = {
+		id = SHX_YanJiuZhuangJia
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SHX_YanJiuMoTuoHua }
+		x = 24
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+#保境安民
+	focus = {
+		id = SHX_BaoJingAnMin
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SHX_JinSuiJun }
+		x = 20
+		y = 1
+		cost = 6
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+#火炮研究
+	focus = {
+		id = SHX_HuoPaoYanJiu
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SHX_BaoJingAnMin }
+		x = 20
+		y = 2
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+#新式火炮试制
+	focus = {
+		id = SHX_XinShiHuoPao
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SHX_HuoPaoYanJiu }
+		x = 20
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+#人才吸收
+	focus = {
+		id = SHX_RenCaiXiShou
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = SHX_JinSuiJun }
+		available = {
+        	has_country_flag = SHX_KangRi	
+				}
+
+		x = 17
+		y = 1
+		cost = 6
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = SHX_Li_Yun_Long
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SHX_Wei_He_Shang
+			show_ideas_tooltip = SHX_Chu_Yun_Fei
+		}
+	}
+#共产党战法学习
+	focus = {
+		id = SHX_GongChanDangZhanFa
+		icon = GFX_goal_molotov_ribbentrop_pact
+		mutually_exclusive = {focus = SHX_GuoMinDangZhanFa}
+		prerequisite = { focus = SHX_RenCaiXiShou }
+		x = 16
+		y = 2
+		cost = 6
+		completion_reward = {
+		add_ideas = ChiJiuZhanZhanFa
+		}
+	}
+#国民党战法学习
+	focus = {
+		id = SHX_GuoMinDangZhanFa
+		icon = GFX_goal_generic_military_deal
+		mutually_exclusive = {focus = SHX_GongChanDangZhanFa}
+		prerequisite = { focus = SHX_RenCaiXiShou }
+		x = 18
+		y = 2
+		cost = 6
+		completion_reward = {
+		add_ideas = TianLuZhanFa
+		}
+	}
+#发展航空
+	focus = {
+		id = SHX_FaZhanHangKong
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SHX_JinSuiJun }
+		x = 28
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+#聘请技师
+	focus = {
+		id = SHX_PinQingJiShi
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = SHX_FaZhanHangKong }
+		x = 26
+		y = 2
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+#空军理论学习
+	focus = {
+		id = SHX_KongJunLiLunXueXi
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SHX_PinQingJiShi }
+		x = 26
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+#空军优势论
+	focus = {
+		id = SHX_KongJunYouShiLun
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SHX_KongJunLiLunXueXi }
+		x = 26
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+#山西飞机厂
+	focus = {
+		id = SHX_ShanXiFeiJiChang
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SHX_FaZhanHangKong }
+		x = 29
+		y = 2
+		cost = 6
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+	}
+#重视战斗机
+	focus = {
+		id = SHX_ZhongShiZhanDouJi
+		icon = GFX_goal_generic_air_fighter
+		mutually_exclusive = {focus = SHX_ZhongShiHongZhaJi}
+		prerequisite = { focus = SHX_ShanXiFeiJiChang }
+		x = 28
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 1
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+#新式战斗机
+	focus = {
+		id = SHX_XinShiZhanDouJi
+		icon = GGFX_goal_generic_air_fighter2
+		prerequisite = { focus = SHX_ZhongShiZhanDouJi }
+		x = 28
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 2
+				technology = CAS1
+				technology = CAS2
+				technology = CAS3
+			}
+		}
+	}
+
+#重视轰炸机
+	focus = {
+		id = SHX_ZhongShiHongZhaJi
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = {focus = SHX_ZhongShiZhanDouJi}
+		prerequisite = { focus = SHX_ShanXiFeiJiChang }
+		x = 30
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.75
+				uses = 1
+				technology = early_bomber
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+		}
+	}
+#新式轰炸机
+	focus = {
+		id = SHX_XinShiHongZhaJi
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SHX_ZhongShiHongZhaJi }
+		x = 30
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.75
+				uses = 1
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+		}
+	}
+#火箭技术
+	focus = {
+		id = SHX_HuoJianJiShu
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = SHX_XinShiZhanDouJi focus = SHX_XinShiHongZhaJi }
+		x = 29
+		y = 5
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 0.5
+				uses = 2
+				category = rocketry
+			}
+		}
+	}
+#核武器研究
+	focus = {
+		id = SHX_HeWuQiYanJiu
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = SHX_LuJunJunZhengGaiGe }
+		prerequisite = { focus = SHX_KongJunYouShiLun }
+		x = 24
+		y = 5
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.75
+				uses = 2
+				category = nuclear
+			}
+		}
+	}
+#精英科学家
+	focus = {
+		id = SHX_JingYingKeXueJia
+		icon = GFX_focus_research
+		prerequisite = { focus = SHX_HeWuQiYanJiu}
+		x = 24
+		y = 6
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+				
+			
+		}
+	}
+
+#发展海军
+	focus = {
+		id = SHX_FaZhanHaiJun
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SHX_JinSuiJun }
+		x = 33
+		y = 1
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+	}
+#海军司令部
+	focus = {
+		id = SHX_HaiJunSiLingBu
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SHX_FaZhanHaiJun }
+		x = 33
+		y = 2
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#驱逐舰
+	focus = {
+		id = SHX_QuZhuJian
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SHX_HaiJunSiLingBu }
+		mutually_exclusive = { focus = SHX_QianTing }
+		x = 32
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.75
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+#潜艇
+	focus = {
+		id = SHX_QianTing
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SHX_HaiJunSiLingBu }
+		mutually_exclusive = { focus = SHX_QuZhuJian }
+		x = 34
+		y = 3
+		cost = 6
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.75
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+#巡洋舰
+	focus = {
+		id = SHX_XunYangJian
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SHX_QuZhuJian    focus = SHX_QianTing }
+		x = 33
+		y = 4
+		cost = 6
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+

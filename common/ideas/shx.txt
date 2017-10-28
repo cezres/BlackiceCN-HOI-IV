@@ -1,0 +1,51 @@
+ideas = {
+	army_chief = {
+		
+		SHX_Li_Yun_Long = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = SHX
+			}
+			available = {
+				has_completed_focus = SHX_RenCaiXiShou
+			}
+			traits = { army_chief_offensive_3 }			
+		}
+
+	}
+	
+
+	high_command = {
+
+		
+		SHX_Wei_He_Shang = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = SHX
+			}
+			available = {
+				has_completed_focus = SHX_RenCaiXiShou
+			}			
+			traits = { army_armored_2 }
+		}
+
+		SHX_Chu_Yun_Fei = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = SHX
+			}
+			available = {
+				has_completed_focus = SHX_RenCaiXiShou
+			}	
+			traits = { army_infantry_2 }
+			}
+		}
+	}
+
+}

@@ -1,0 +1,2041 @@
+focus_tree = {
+	id = SunFallPRC_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+
+#艰苦开拓
+	focus = {
+		id = SunFallPRC_JianKuKaiTuo
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+#大生产运动
+	focus = {
+		id = SunFallPRC_NongCunBaoWeiChengShi
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SunFallPRC_JianKuKaiTuo }
+		x = 0
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			add_ideas = incompetent_industry_real_2
+			remove_ideas = incompetent_industry_fake
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#大生产运动II
+	focus = {
+		id = SunFallPRC_NongCunBaoWeiChengShiII
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SunFallPRC_NongCunBaoWeiChengShi }
+		x = 0
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			add_ideas = incompetent_industry_real_3
+			remove_ideas = incompetent_industry_fake
+			remove_ideas = incompetent_industry_real
+			remove_ideas = incompetent_industry_real_2
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#革命根据地
+	focus = {
+		id = SunFallPRC_GeMingGenJuDi
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SunFallPRC_JianKuKaiTuo }
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 3			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+#革命根据地II
+	focus = {
+		id = SunFallPRC_GeMingGenJuDiII
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SunFallPRC_GeMingGenJuDi }
+		x = 2
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 3			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+#读书识字
+	focus = {
+		id = SunFallPRC_KeJiDeZhongYaoXing
+		icon = GFX_focus_research
+		prerequisite = { focus = SunFallPRC_NongCunBaoWeiChengShiII }
+		prerequisite = { focus = SunFallPRC_GeMingGenJuDiII }
+		x = 1
+		y = 3
+		cost = 10
+		completion_reward = {
+				remove_ideas = public_iliteracy
+				add_ideas = public_iliteracy_2
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#军民同心
+	focus = {
+		id = SunFallPRC_JunMinTongXin
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SunFallPRC_KeJiDeZhongYaoXing }
+		x = 1
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_ideas = JunMinTongXin
+			remove_ideas = incompetent_industry_real_3
+			remove_ideas = incompetent_industry_fake
+			remove_ideas = incompetent_industry_real
+			remove_ideas = incompetent_industry_real_2
+			add_ideas = incompetent_industry_real_4
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+#电子科技
+	focus = {
+		id = SunFallPRC_DianZiKeJi
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = SunFallPRC_JunMinTongXin }
+		x = 1
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			remove_ideas = incompetent_industry_real_4
+			remove_ideas = incompetent_industry_real_3
+			remove_ideas = incompetent_industry_fake
+			remove_ideas = incompetent_industry_real
+			remove_ideas = incompetent_industry_real_2
+			add_ideas = incompetent_industry_real_5
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#----------------------------------------------------------------
+#土地改革
+	focus = {
+		id = SunFallPRC_TuDiGaiGe
+		icon = GFX_goal_generic_position_armies
+		available = {
+				OR = {
+				has_country_flag = sunfall
+				date > 1941.7.1
+						}	
+				}
+		x = 5
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#新中国建设
+	focus = {
+		id = SunFallPRC_XinZhongGuoJianShe
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SunFallPRC_TuDiGaiGe }
+		available = {	has_country_flag = united_china	}
+		x = 5
+		y = 2
+		cost = 10
+		completion_reward = {
+			remove_ideas = public_iliteracy_2
+			remove_ideas = incompetent_industry_fake
+			remove_ideas = incompetent_industry_real
+			remove_ideas = incompetent_industry_real_2
+			remove_ideas = incompetent_industry_real_3
+			remove_ideas = incompetent_industry_real_4
+			remove_ideas = incompetent_industry_real_5
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = PRC_Norinco
+			show_ideas_tooltip = PRC_zhonghang
+			show_ideas_tooltip = PRC_dalianchuan
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+#五年计划
+	focus = {
+		id = SunFallPRC_WuNianJiHua
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SunFallPRC_XinZhongGuoJianShe }
+		x = 4
+		y = 3
+		cost = 10
+		completion_reward = {
+				add_timed_idea = {
+					idea = WuNianJiHua
+					days = 1000
+				}
+			592 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	
+#三线建设
+	focus = {
+		id = SunFallPRC_SanXianJianShe
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SunFallPRC_XinZhongGuoJianShe }
+		x = 6
+		y = 3
+		cost = 10
+		completion_reward = {
+			602 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			603 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			325 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			600 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			328 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#大跃进
+	focus = {
+		id = SunFallPRC_DaYueJin
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = SunFallPRC_WuNianJiHua }
+		available = {	
+				NOT = { has_idea = WuNianJiHua }
+				NOT = { has_idea = YiWuLiuGongCheng }
+					}
+		x = 5
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_ideas = DaYueJin
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#大炼钢铁
+	focus = {
+		id = SunFallPRC_DaLianGangTie
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SunFallPRC_DaYueJin }
+		x = 4
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 715
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 608
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 613
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 620
+			}
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 615
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+#大炼铝材
+	focus = {
+		id = SunFallPRC_DaLianLvCai
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SunFallPRC_DaYueJin }
+		x = 6
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 615
+			}
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 603
+			}
+			add_resource = {
+				type = aluminium
+				amount = 3
+				state = 607
+			}
+			add_resource = {
+				type = aluminium
+				amount = 3
+				state = 599
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+#大跃进叫停
+	focus = {
+		id = SunFallPRC_DaYueJinJiaoTing
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = { focus = SunFallPRC_DaLianGangTie }
+		prerequisite = { focus = SunFallPRC_DaLianLvCai }
+		x = 5
+		y = 6
+		cost = 10
+		completion_reward = {
+			remove_ideas = DaYueJin
+			add_ideas = DaYueJinII		
+		}
+		
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#----------------------------------------------------------------
+#红军
+	focus = {
+		id = SunFallPRC_HongJun
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 10
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+#更多人才
+	focus = {
+		id = SunFallPRC_GengDuoRenCai
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = SunFallPRC_HongJun }
+		x = 8
+		y = 1
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = PRC_lin_biao
+			show_ideas_tooltip = PRC_liu_bo_cheng
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = PRC_su_yu
+			show_ideas_tooltip = PRC_luo_rong_heng
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+#长征的经验
+	focus = {
+		id = SunFallPRC_ChangZhengDeJingYan
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = SunFallPRC_GengDuoRenCai }
+		x = 8
+		y = 2
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#毛泽东军事思想
+	focus = {
+		id = SunFallPRC_MaoZeDongJunShiSiXiang
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SunFallPRC_ChangZhengDeJingYan }
+		x = 8
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = support_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#小米加步枪
+	focus = {
+		id = SunFallPRC_XiaoMiJiaBuQiang
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SunFallPRC_HongJun }
+		x = 10
+		y = 1
+		cost = 10
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#山炮
+	focus = {
+		id = SunFallPRC_ShanPao
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SunFallPRC_XiaoMiJiaBuQiang }
+		x = 10
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#特种部队
+	focus = {
+		id = SunFallPRC_TeZhongBuDui
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SunFallPRC_ShanPao }
+		x = 10
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.75
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#科研教育
+	focus = {
+		id = SunFallPRC_KeYanJiaoYu
+		icon = GFX_focus_research
+		prerequisite = { focus = SunFallPRC_GengDuoRenCai }
+		prerequisite = { focus = SunFallPRC_XiaoMiJiaBuQiang }
+		x = 9
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#人民解放军
+	focus = {
+		id = SunFallPRC_RenMinJieFangJun
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SunFallPRC_HongJun }
+		available = {	date > 1939.1.1	}
+		x = 12
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = FRA_infantry_focus
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#军事学校
+	focus = {
+		id = SunFallPRC_JunShiXueXiao
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SunFallPRC_RenMinJieFangJun }
+		x = 12
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = militarized_schools
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#机械化
+	focus = {
+		id = SunFallPRC_JiXieHua
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SunFallPRC_JunShiXueXiao }
+		x = 12
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				uses = 1
+				category = motorized_equipment
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = PRC_xu_guangda
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#现代装甲军队
+	focus = {
+		id = SunFallPRC_XianDaiZhuangJiaJunDui
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = SunFallPRC_MaoZeDongJunShiSiXiang }
+		prerequisite = { focus = SunFallPRC_TeZhongBuDui }
+		prerequisite = { focus = SunFallPRC_JiXieHua }
+		x = 9
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#第二炮兵
+	focus = {
+		id = SunFallPRC_DiErPaoBing
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = SunFallPRC_MaoZeDongJunShiSiXiang }
+		prerequisite = { focus = SunFallPRC_TeZhongBuDui }
+		prerequisite = { focus = SunFallPRC_JiXieHua }
+		x = 11
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 0.5
+				uses = 2
+				category = rocketry
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#----------------------------------------------------------------
+#航空学校
+	focus = {
+		id = SunFallPRC_HangKongXueXiao
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = SunFallPRC_HongJun }
+		x = 15
+		y = 2
+		cost = 10
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = radar_focus
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#发展空军
+	focus = {
+		id = SunFallPRC_FaZhanKongJun
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = SunFallPRC_HangKongXueXiao }
+		x = 15
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#归国科学家
+	focus = {
+		id = SunFallPRC_GuiGuoKeXueJia
+		icon = GFX_focus_research
+		prerequisite = { focus = SunFallPRC_FaZhanKongJun }
+		available = {	date > 1940.1.1	}
+		x = 15
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#重视制空权
+	focus = {
+		id = SunFallPRC_ZhongShiZhiKongQuan
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = SunFallPRC_GuiGuoKeXueJia }
+		mutually_exclusive = { focus = SunFallPRC_ZhongShiKongZhongZhiYuan }
+		x = 14
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.5
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#重视空中支援
+	focus = {
+		id = SunFallPRC_ZhongShiKongZhongZhiYuan
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = SunFallPRC_GuiGuoKeXueJia }
+		mutually_exclusive = { focus = SunFallPRC_ZhongShiZhiKongQuan }
+		x = 16
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 0.5
+				uses = 2
+				technology = CAS1
+				technology = CAS2
+				technology = CAS3
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#战术轰炸机
+	focus = {
+		id = SunFallPRC_ZhanShuHongZhaJi
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SunFallPRC_ZhongShiZhiKongQuan   focus = SunFallPRC_ZhongShiKongZhongZhiYuan }
+		mutually_exclusive = { focus = SunFallPRC_ZhanLueHongZhaJi }
+		x = 14
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.75
+				uses = 1
+				technology = early_bomber
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#战略轰炸机
+	focus = {
+		id = SunFallPRC_ZhanLueHongZhaJi
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = SunFallPRC_ZhongShiZhiKongQuan   focus = SunFallPRC_ZhongShiKongZhongZhiYuan }
+		mutually_exclusive = { focus = SunFallPRC_ZhanShuHongZhaJi }
+		x = 16
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.75
+				uses = 1
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#----------------------------------------------------------------
+#新中国海军
+	focus = {
+		id = SunFallPRC_XinZhongGuoHaiJun
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = SunFallPRC_HongJun }
+		available = {
+			OR = {
+				has_country_flag = united_china
+				date > 1941.7.1
+						}
+				}
+		x = 19
+		y = 2
+		cost = 10
+		completion_reward = {
+			navy_experience = 50
+			PRC = {
+				country_event = chinaterritory.902
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#发展海军
+	focus = {
+		id = SunFallPRC_FaZhanHaiJun
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = SunFallPRC_XinZhongGuoHaiJun }
+		x = 19
+		y = 4
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = USA_fund_the_navy
+				uses = 2
+				bonus = 0.5
+				category = naval_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#驱逐舰
+	focus = {
+		id = SunFallPRC_QuZhuJian
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = SunFallPRC_FaZhanHaiJun }
+		mutually_exclusive = { focus = SunFallPRC_QianTing }
+		x = 18
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.75
+				uses = 1
+				category = dd_tech
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#潜艇
+	focus = {
+		id = SunFallPRC_QianTing
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = SunFallPRC_FaZhanHaiJun }
+		mutually_exclusive = { focus = SunFallPRC_QuZhuJian }
+		x = 20
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.75
+				uses = 1
+				category = ss_tech
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#巡洋舰
+	focus = {
+		id = SunFallPRC_XunYangJian
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SunFallPRC_QuZhuJian    focus = SunFallPRC_QianTing }
+		x = 19
+		y = 6
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#航空母舰
+	focus = {
+		id = SunFallPRC_HangKongMuJian
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = SunFallPRC_ZhanShuHongZhaJi   focus = SunFallPRC_ZhanLueHongZhaJi }
+		prerequisite = { focus = SunFallPRC_XunYangJian }
+		x = 19
+		y = 7
+		cost = 10
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+#----------------------------------------------------------------
+#大国重器
+	focus = {
+		id = SunFallPRC_ZhongJiDeKeJi
+		icon = GFX_focus_research
+		prerequisite = { focus = SunFallPRC_DianZiKeJi }
+		prerequisite = { focus = SunFallPRC_DaYueJinJiaoTing }
+		prerequisite = { focus = SunFallPRC_XianDaiZhuangJiaJunDui }
+		prerequisite = { focus = SunFallPRC_DiErPaoBing }
+		available = {	num_of_factories > 300	}
+		x = 6
+		y = 7
+		cost = 10
+		completion_reward = {
+			add_ideas = SunFallidea_JingRuiJunDui
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				bonus = 0.5
+				uses = 2
+				category = jet_technology
+			}
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 0.75
+				uses = 2
+				category = nuclear
+			}
+			add_research_slot = 1
+		}
+		ai_will_do = {
+			factor = 80
+		}
+	}
+	
+#----------------------------------------------------------------
+#人民的力量
+	focus = {
+		id = SunFallPRC_RenMinDeLiLiang
+		icon = GFX_goal_generic_political_pressure
+		x = 27
+		y = 0
+		cost = 1
+		completion_reward = {
+			add_political_power = 80
+			add_ideas = peoples_force
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#抗日救亡
+	focus = {
+		id = SunFallPRC_KangRiJiuWang
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SunFallPRC_RenMinDeLiLiang }
+		available = {
+				#has_country_flag = PRC_joined_CHI_against_JAP
+				NOT = { has_country_flag = sunfall }
+				#is_in_faction_with = CHI
+        PRC = {
+        	has_war_with = JAP 
+        	has_defensive_war = yes
+        	is_puppet = no
+        }
+        CHI = {
+        	has_war_with = JAP 
+        	has_defensive_war = yes
+        	is_puppet = no
+        }
+				}
+		x = 24
+		y = 1
+		cost = 10
+		completion_reward = {
+			add_political_power = 80
+			PRC = {
+				country_event = sunfall.100
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#中华浩劫
+	focus = {
+		id = SunFallPRC_ZhongHuaHaoJie
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SunFallPRC_KangRiJiuWang }
+		x = 24
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_political_power = 80
+			add_ideas = FRA_national_mobilization_focus
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+#民心所向
+	focus = {
+		id = SunFallPRC_MinXinSuoXiang
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = SunFallPRC_ZhongHuaHaoJie }
+		available = {	has_country_flag = sunfall	}
+		x = 22
+		y = 3
+		cost = 10
+		completion_reward = {
+				add_timed_idea = {
+					idea = MinXinSuoXiang
+					days = 550
+				}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#向前向前向前
+	focus = {
+		id = SunFallPRC_XiangQian
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SunFallPRC_MinXinSuoXiang }
+		available = {
+				has_global_flag = PRC_restart_CHI_war
+				NOT = { has_war_with = CHI }
+				CHI = { exists = yes }	
+					}
+		x = 22
+		y = 4
+		cost = 1
+		completion_reward = {
+			PRC = {
+				country_event = china.109
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#新疆
+	focus = {
+		id = SunFallPRC_XinJiang
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SunFallPRC_MinXinSuoXiang }
+		available = {
+				NOT = { has_war_with = SIK }
+				SIK = { exists = yes }
+				SIK = { is_puppet = no }
+        controls_state = 283
+        controls_state = 325
+        controls_state = 328
+        controls_state = 591
+        controls_state = 592
+        controls_state = 593
+        controls_state = 594
+        controls_state = 595
+        controls_state = 596
+        controls_state = 597
+        controls_state = 598
+        controls_state = 599
+        controls_state = 600
+        controls_state = 601
+        controls_state = 602
+        controls_state = 603
+        controls_state = 604
+        controls_state = 605
+        controls_state = 606
+        controls_state = 607
+        controls_state = 608
+        controls_state = 609
+        controls_state = 610
+        controls_state = 611
+        controls_state = 612
+        controls_state = 613
+        controls_state = 614
+        controls_state = 615
+        controls_state = 616
+        controls_state = 620
+        controls_state = 621
+        controls_state = 622
+        controls_state = 714
+        controls_state = 715
+        controls_state = 716
+        controls_state = 717
+				}
+		x = 23
+		y = 5
+		cost = 10
+		completion_reward = {
+			PRC = {
+				country_event = chinaterritory.804
+			}
+			annex_country = { target = SIK }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#西藏
+	focus = {
+		id = SunFallPRC_XiZang
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = SunFallPRC_MinXinSuoXiang }
+		available = {
+				NOT = { has_war_with = TIB }
+				TIB = { exists = yes }
+				TIB = { is_puppet = no }				
+        controls_state = 283
+        controls_state = 325
+        controls_state = 328
+        controls_state = 591
+        controls_state = 592
+        controls_state = 593
+        controls_state = 594
+        controls_state = 595
+        controls_state = 596
+        controls_state = 597
+        controls_state = 598
+        controls_state = 599
+        controls_state = 600
+        controls_state = 601
+        controls_state = 602
+        controls_state = 603
+        controls_state = 604
+        controls_state = 605
+        controls_state = 606
+        controls_state = 607
+        controls_state = 608
+        controls_state = 609
+        controls_state = 610
+        controls_state = 611
+        controls_state = 612
+        controls_state = 613
+        controls_state = 614
+        controls_state = 615
+        controls_state = 616
+        controls_state = 620
+        controls_state = 621
+        controls_state = 622
+        controls_state = 714
+        controls_state = 715
+        controls_state = 716
+        controls_state = 717
+				}
+		x = 24
+		y = 6
+		cost = 10
+		completion_reward = {
+			322 = { add_core_of = PRC }
+			PRC = {
+				country_event = chinaterritory.805
+			}
+			annex_country = { target = TIB }
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#抗战血染的经验
+	focus = {
+		id = SunFallPRC_XueRanDeJingYan
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SunFallPRC_ZhongHuaHaoJie }
+		available = {	has_country_flag = sunfall	}
+		x = 26
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = xuerandejingyan
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+#日本工业迁移
+	focus = {
+		id = SunFallPRC_JAPGongYeQianYi
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SunFallPRC_XueRanDeJingYan }
+		available = {
+		282 = {
+				is_controlled_by = PRC
+				arms_factory > 1
+				industrial_complex > 1
+			}
+		OR = {
+				282 = { is_owned_by = JAP }
+				282 = { is_owned_by = PRC }
+			}
+		531 = {
+				is_controlled_by = PRC
+				arms_factory > 1
+				industrial_complex > 1
+			}
+		OR = {
+				531 = { is_owned_by = JAP }
+				531 = { is_owned_by = PRC }
+			}
+		532 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				532 = { is_owned_by = JAP }
+				532 = { is_owned_by = PRC }
+			}
+		528 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				528 = { is_owned_by = JAP }
+				528 = { is_owned_by = PRC }
+			}
+		529 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				529 = { is_owned_by = JAP }
+				529 = { is_owned_by = PRC }
+			}
+		530 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				530 = { is_owned_by = JAP }
+				530 = { is_owned_by = PRC }
+			}
+		533 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				533 = { is_owned_by = JAP }
+				533 = { is_owned_by = PRC }
+			}
+		534 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				534 = { is_owned_by = JAP }
+				534 = { is_owned_by = PRC }
+			}
+		535 = {
+				is_controlled_by = PRC
+				arms_factory > 0
+				industrial_complex > 0
+			}
+		OR = {
+				535 = { is_owned_by = JAP }
+				535 = { is_owned_by = PRC }
+			}
+		608 = { is_owned_and_controlled_by = PRC }
+		592 = { is_owned_and_controlled_by = PRC }
+		613 = { is_owned_and_controlled_by = PRC }
+		has_country_flag = sunfall
+		has_global_flag = fall_of_tokyo_PRC		
+			}
+		x = 26
+		y = 6
+		cost = 10
+		completion_reward = {
+			PRC = {
+				country_event = sunfall.104
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#民族觉醒
+	focus = {
+		id = SunFallPRC_MinZuJueXing
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SunFallPRC_RenMinDeLiLiang }
+		available = {	date > 1938.1.1	}
+		x = 30
+		y = 2
+		cost = 10
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+			set_rule = {
+				can_create_factions = yes
+			}
+			hidden_effect = {
+				set_rule = { can_use_kamikaze_pilots = yes }
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+
+#靠拢共产国际
+	focus = {
+		id = SunFallPRC_KaoLongGongChanGuoJi
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = SunFallPRC_MinZuJueXing }
+		mutually_exclusive = { focus = SunFallPRC_ZiQiangZhiLu }
+		available = {	NOT = { has_war_with = SOV }		has_government = communism	}
+		x = 28
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = PRC_SOV }
+			SOV = { add_opinion_modifier = { target = PRC modifier = PRC_SOV } }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#苏联科学家
+	focus = {
+		id = SunFallPRC_SuLianKeXueJia
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = SunFallPRC_KaoLongGongChanGuoJi }
+		available = {	NOT = { has_war_with = SOV }		has_government = communism	}
+		x = 28
+		y = 4
+		cost = 10
+		completion_reward = {
+				add_timed_idea = {
+					idea = JingYingKeXueJia
+					days = 1095
+				}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#共产主义同志
+	focus = {
+		id = SunFallPRC_SuYuanShi
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = SunFallPRC_SuLianKeXueJia }
+		available = {	NOT = { has_war_with = SOV }		has_government = communism	}
+		x = 28
+		y = 5
+		cost = 10
+		completion_reward = {
+				add_timed_idea = {
+					idea = GongChanZhuYiTongZhi
+					days = 1825
+				}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#一五六工程
+	focus = {
+		id = SunFallPRC_YiWuLiuGongCheng
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SunFallPRC_SuYuanShi }
+		available = {	has_country_flag = united_china  NOT = { has_war_with = SOV }		has_government = communism	}
+		x = 28
+		y = 6
+		cost = 10
+		completion_reward = {
+				add_timed_idea = {
+					idea = YiWuLiuGongCheng
+					days = 365
+				}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+#自强之路
+	focus = {
+		id = SunFallPRC_ZiQiangZhiLu
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = SunFallPRC_MinZuJueXing }
+		mutually_exclusive = { focus = SunFallPRC_KaoLongGongChanGuoJi }
+		available = {	has_country_flag = united_china	}
+		x = 30
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_ideas = ZiQiangZhiLu
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#澳门广州湾
+	focus = {
+		id = SunFallPRC_AoMenGuangZhouWan
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SunFallPRC_ZiQiangZhiLu }
+		available = {
+        728 = { is_owned_by = FRA }
+        729 = { is_owned_by = POR }
+        NOT = { has_war_with = FRA }
+        NOT = { has_war_with = POR }
+			}
+		x = 32
+		y = 4
+		cost = 10
+		completion_reward = {
+			PRC = {
+				country_event = chinaterritory.801
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#香港藏南
+	focus = {
+		id = SunFallPRC_XiangGangZangNan
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = SunFallPRC_ZiQiangZhiLu }
+		available = {
+        326 = { is_owned_by = ENG }
+        434 = { is_owned_by = RAJ }
+        NOT = { has_war_with = ENG }
+        NOT = { has_war_with = RAJ }
+			}
+		x = 31
+		y = 5
+		cost = 10
+		completion_reward = {
+			PRC = {
+				country_event = chinaterritory.802
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#中苏领土纷争
+	focus = {
+		id = SunFallPRC_ZhongSuLingTuFenZheng
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = SunFallPRC_ZiQiangZhiLu }
+		available = {
+        SOV = { exists = yes }
+				SOV = { is_faction_leader = yes }
+        408 = { is_owned_by = SOV }
+        409 = { is_owned_by = SOV }
+        560 = { is_owned_by = SOV }
+        657 = { is_owned_by = SOV }
+        655 = { is_owned_by = SOV }
+        561 = { is_owned_by = SOV }
+        330 = { is_owned_by = MON }
+        OR = {
+              329 = { is_owned_by = TAN }
+              329 = { is_owned_by = SOV }
+           }
+			}
+		x = 30
+		y = 6
+		cost = 10
+		completion_reward = {
+			PRC = {
+				country_event = chinaterritory.803
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#苏联归还领土
+	focus = {
+		id = SunFallPRC_SuLianGuiHuanLingTu
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = SunFallPRC_ZhongSuLingTuFenZheng }
+		available = {
+        has_country_flag = war_SOV
+				is_in_faction = no
+				ROOT = { num_of_factories > 200 }
+        NOT = { has_war_with = SOV }
+				SOV = { exists = yes }
+				SOV = { is_faction_leader = yes }
+				GER = { exists = yes }
+				GER = { is_faction_leader = yes }
+        SOV = { has_war_with = GER }
+				MON = { exists = yes }
+        242 = { is_owned_by = SOV }
+        NOT = { 242 = { is_controlled_by = SOV } }
+        222 = { is_owned_by = SOV }
+        NOT = { 222 = { is_controlled_by = SOV } }
+        227 = { is_owned_by = SOV }
+        NOT = { 227 = { is_controlled_by = SOV } }
+        408 = { is_owned_and_controlled_by = SOV }
+        409 = { is_owned_and_controlled_by = SOV }
+        560 = { is_owned_and_controlled_by = SOV }
+        657 = { is_owned_and_controlled_by = SOV }
+        655 = { is_owned_and_controlled_by = SOV }
+        561 = { is_owned_and_controlled_by = SOV }
+        330 = { is_owned_and_controlled_by = MON }
+        OR = {
+              329 = { is_owned_and_controlled_by = TAN }
+              329 = { is_owned_and_controlled_by = SOV }
+           }
+			}
+		x = 30
+		y = 7
+		cost = 1
+		completion_reward = {
+			PRC = {
+				country_event = chinaterritory.4
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#中国人民站起来
+	focus = {
+		id = SunFallPRC_ZhongGuoRenMinZhanQiLai
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = SunFallPRC_AoMenGuangZhouWan }
+		prerequisite = { focus = SunFallPRC_XiangGangZangNan }
+		prerequisite = { focus = SunFallPRC_ZhongSuLingTuFenZheng }
+		x = 32
+		y = 7
+		cost = 10
+		completion_reward = {
+			add_ideas = JingYingKeXueJia
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+#反法西斯
+	focus = {
+		id = SunFallPRC_FanFaXiSi
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = SunFallPRC_MinZuJueXing }
+		x = 34
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_political_power = 60
+			USA = { add_opinion_modifier = { target = PRC modifier = anti_fascist_diplomacy_focus } }
+			ENG = { add_opinion_modifier = { target = PRC modifier = anti_fascist_diplomacy_focus } }
+			FRA = { add_opinion_modifier = { target = PRC modifier = anti_fascist_diplomacy_focus } }
+			every_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = PRC modifier = anti_fascist_diplomacy_fascists }
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#支持日本共产组织
+	focus = {
+		id = SunFallPRC_RiBenGongChan
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SunFallPRC_FanFaXiSi }
+		available = {
+				has_country_flag = united_china
+				JAP = { has_government = fascism }
+			#	JAP = {	is_in_faction_with = GER	}
+				}
+		x = 34
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_political_power = 120
+			JAP = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 200
+				}              
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#行动日本赤军
+	focus = {
+		id = SunFallPRC_RiBenChiJun
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SunFallPRC_RiBenGongChan }
+		available = {
+				NOT = { has_war_with = JAP }
+				JAP = { has_war = yes	}
+				JAP = { has_government = fascism	 communism > 0.2	}
+				JAP = {	is_in_faction_with = GER	}
+				528 = { is_owned_and_controlled_by = JAP }
+				}
+		will_lead_to_war_with = JAP
+		x = 34
+		y = 6
+		cost = 10
+		completion_reward = {
+			PRC = { transfer_state = 528 }
+			PRC = {	country_event = chinaterritory.811	}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#反资本主义
+	focus = {
+		id = SunFallPRC_FanZiBenZhuYi
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = SunFallPRC_MinZuJueXing }
+		x = 36
+		y = 3
+		cost = 10
+		completion_reward = {
+			add_political_power = 60
+			every_country = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = PRC modifier = anti_capitalist_diplomacy_focus }
+			}
+			USA = { add_opinion_modifier = { target = PRC modifier = anti_capitalist_diplomacy_capitalists } }
+			ENG = { add_opinion_modifier = { target = PRC modifier = anti_capitalist_diplomacy_capitalists } }
+			FRA = { add_opinion_modifier = { target = PRC modifier = anti_capitalist_diplomacy_capitalists } }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#支持印度共产组织
+	focus = {
+		id = SunFallPRC_YinDuGongChan
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = SunFallPRC_FanZiBenZhuYi	}
+		available = {
+				has_country_flag = united_china
+				RAJ = {	is_in_faction_with = ENG	}
+				}
+		x = 36
+		y = 5
+		cost = 10
+		completion_reward = {
+			add_political_power = 120
+			RAJ = {
+				add_timed_idea = {
+					idea = communist_pressure
+					days = 200
+				}              
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}
+
+#行动印度赤军
+	focus = {
+		id = SunFallPRC_YinDuChiJun
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = SunFallPRC_YinDuGongChan }
+		available = {
+				NOT = { has_war_with = RAJ }
+				RAJ = { is_puppet = yes	}
+				RAJ = { communism > 0.2	}
+				RAJ = {	is_in_faction_with = ENG	}
+				431 = { is_owned_and_controlled_by = RAJ }
+				}
+		will_lead_to_war_with = RAJ
+		x = 36
+		y = 6
+		cost = 10
+		completion_reward = {
+			PRC = { transfer_state = 431 }
+			PRC = {	country_event = chinaterritory.812	}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+	}

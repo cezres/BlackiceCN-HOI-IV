@@ -1,0 +1,220 @@
+
+ai_historical_focus_list_GER = {
+	ai_national_focuses = {
+		# grab as fast as you can if available
+		GER_Schutzstaffel_focus				#02 #	 0 days 	
+		GER_historical_Schutzstaffel		#03 #	 0 days		
+		GER_TV_Schutzstaffel				#04 #	 0 days		
+		GER_Wehrmacht						#05 #	 0 days
+		######################### AI starting ends 5th Jan #####################
+		GER_rhineland						#1  #	 5  Jan  - 1  Mar       #56 days
+		GER_Heer_expansion					#1a #	 1  Mar					#0  days #event driven #Feb
+		GER_achtung_panzer					#1b # 	 1  Mar 				#0  days #event driven
+		GER_liecht_division					#2  #	 2  Mar  - 10 May		#70 days
+		GER_VT_Schutzstaffel				#3 #  	 11  May  - 23 May		#12 days (1.8w) 
+		GER_Goering_Plan					#4	#	 24 May  - 25 Jul   	#63 days 
+		GER_air_innovation					#4a # 	 2  Jun 		  		#0  days #event driven #June
+		GER_autobahn_I						#4b #	 15 Jul					#0  days #event driven #June
+		GER_industrial_effort_36			#5  # 	 26 Jul  - 5 Oct   		#70 days 
+		GER_junkerschulen					#5a # 	 2  Sep 				#0  days #event driven	#moved up because the NF unlocks in June
+		GER_west_wall_lite					#5b #    2 Sep					#0 days
+		GER_anti_comitern_pact				#6  # 	 6 Oct  - 24 Nov       	#50 days (8.1w)  'Historical 25 Nov 36' #Cost reduced to fit, must be after 1 Jul to unlock
+		GER_naval_rearmament				#6a #	 2  Oct	   				#0 days #event driven #Oct #moved up to allow for naval_effort research
+		GER_naval_effort					#7  # 	 25 Nov  - 1  Feb  		#70 days
+		####### 1937 ###########################################################
+		GER_fighter_air_effort				#7  # 	 2  Feb  - 12 Apr   	#70 days
+		GER_tactical_air_effort				#8  #    13 Apr  - 23 Jun		#70 days
+		GER_u_boat_effort					#8a #    2 Jun					#0 days #June #moved up to allow AI to actually use this in time for war
+		GER_industrial_effort_37			#9  #    24 Jun  - 13 Sep      	#84 days (12w)
+		GER_autobahn_II						#10 #    14 Sep  - 6 Dec		#84 days (12w)
+		GER_west_wall_med					#11 # 	 7  Dec  - 21 Dec       #15 days (2.1w) 
+		GER_anschluss						#12 #  	 23 Dec  - 2  Mar		#70 days #Historical  3 Mar 38' # note - cant make this smaller, something fouls up if so, cant find event code that does it - I would like MED WALL to be 70 days and Sudetenland to be 15
+		####### 1938 ###########################################################
+		GER_infanterie_tactics				#12a #   2 Jan        			#0 days #event driven Jan
+		GER_japan_friend					#13a #   16 Mar -  24 May		#70 days
+	    GER_divebomber_focus 				#14a #	 25 May  - 5  Aug  		#70 days  
+		GER_industrial_effort_38			#15 #	 2  Jun					#0  days #event driven
+		GER_demand_sudetenland 				#14 #    6  Aug  - 7  Oct       #69 days (9.9w)  'Historical 10 Oct 38'  aug3 - 
+		GER_first_vienna_award				#16 # 	 8 Oct  -  1 Nov      	#22 days (3.1w)  'Historical  2 Nov 38'
+		GER_air_innovation_2				#17 #	 2  Nov  - 11 Jan 		#70 days
+		######## 1939 ##########################################################
+		GER_end_of_czechoslovakia			#18 #	 12 Jan  - 14 Mar		#63 days (9w)    'Historical 15 Mar 39'
+		GER_demand_memel					#19 #    15 Mar  - 21 Mar		#7  days (1w)    'Historical 22 Mar 39'
+		GER_industrial_effort_39			#19b #	 22 Mar					#0  days #event driven
+		GER_soviet_treaty					#20 #	 22 Mar  - 30 May		#70 days		 	
+		GER_Grossdeutschland				#21		 10 May  - 14 Jun		#35 days
+		GER_mol_rib_pact					#22 #    31 May  - 22 Aug		#84 days (12w)   'Historical 23 Aug 39'
+		GER_Panzer_division		
+		GER_danzig_or_war					#24 #    24 Aug  - 31 Aug		#7  days  'Historical  1 Sep 39' NON-HISTORIC DATE due AI doesn't declare war until the day after this event, so we WANT AI starting hostilies on Sept 1
+		GER_trade_interdiction 				#26 #	 21 Nov - 30 Jan		#70 days
+		####### 1940 ###########################################################
+		GER_artillery_expansion 				#27	#	 1 Jan					#0 days Event Driven
+		GER_weserubung
+		GER_alsace_lorraine
+		GER_industrial_effort_40
+		GER_around_maginot 				#28 #	 7 Mar  -  29 Mar	 	#22 days (3.1w) #shortened for timing purposes
+		GER_war_with_france 
+		GER_Schutzstaffel_junkerschule_klagenfurt 	#30 #	 1 Feb - 6 Mar			#35 days
+		GER_italy_ally						#32 #	 10 May					#0 days  #being skiped because ITA is usually in Axis by this time - need to see why, prevent ITA from aligning, or whatever means necessary]] - once we figure out how to keep ITA out of the war, can put all of this stuff back in place must must be aware of the timeline consequences
+		GER_extra_tech_slot					#33 #	 21 Jun  - 30 Aug		#70 days
+		GER_second_vienna_award				#34 #	 31 Aug  - 20 Sep		#21 days (3w)
+		
+		####### 1941 ###########################################################
+		
+		GER_demand_slovenia					#36 #	 1 Dec  - 22 Dec		#21 days #earlier to give AI time
+		GER_first_ljubljana_award				#38 #	 2 Jan					#0  days
+		GER_fate_of_yugoslavia				#39 #	 20 Jan					#0  days
+		GER_war_with_greece					#40 #	 2 Feb					#0  days
+		GER_western_knowledge				#35 #	 21 Sep  - 30  Nov		#70 days
+		GER_kampfgruppes					#41 #	 4 Mar - 13 May         #70 days
+		GER_rocketry_focus					#37 #	 23 Dec - 3 Mar         #70 days
+		GER_ussr_war_goal					#42 #	 14 May	- 20 june		#37 days (3.9) #shortened to fit in a necessary 70 day focus, as there's no available short focus
+		GER_autobahn_III
+		GER_levelbomber_focus
+		GER_fighterbomber_effort
+		
+		GER_autobahn_IV
+		GER_naval_air_effort
+		GER_wunderwaffe
+	}
+}
+
+ai_focus_defense_GER = {
+	research = {
+		defensive = 5.0	
+		radar_tech = 1.0
+		infantry_tech = 15.0
+		infantry_weapons = 50.0
+		support_tech = 6.5
+		construction_tech = 2.0 
+		artillery = 2.0
+		motorized_equipment = 3.0
+		armor = 3.0
+	}
+}
+
+ai_focus_aggressive_GER = {
+	research = {
+		offensive = 5.0
+		synth_resources = 1.0
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		motorized_equipment = 5.0
+		armor = 20.0
+	}
+}
+
+ai_focus_war_production_GER = {
+	research = {
+		industry = 20.0
+		construction_tech = 10.0
+		electronics = 20.0 
+		computing_tech = 2.0	
+		infantry_tech = 3.0
+		motorized_equipment = 3.0
+		armor = 3.0		
+	}
+}
+
+ai_focus_military_equipment_GER = {
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 12.0
+		support_tech = 10.5
+		motorized_equipment = 3.0
+		armor = 3.0
+	}
+}
+
+ai_focus_military_advancements_GER = {
+	research = {
+		#armor = 100.0
+		cat_light_armor = 50.0 
+        cat_medium_armor = 150.0
+		cat_heavy_armor = 45.0	
+		jet_technology = 5.0
+		land_doctrine = 75.0
+		rocketry = 7.5
+		radar_tech = 3.0
+		encryption_tech = 7.5
+		decryption_tech = 7.5
+		synth_resources = 3.0
+		infantry_tech = 20.0
+		infantry_weapons = 20.0
+		artillery = 20.0
+		motorized_equipment = 40.0
+		nuclear = 5.0
+		night_vision = 5.0
+		torpedo_equipment = 10.0
+	}
+}
+
+ai_focus_peaceful_GER = {
+	research = {
+		industry = 25.0
+		construction_tech = 8.0
+		electronics = 15.0
+		computing_tech = 10.0
+		infantry_tech = 15.0
+		infantry_weapons = 15.0
+		artillery = 15.0
+		naval_equipment = 5.0
+		ss_tech = 5.0
+		air_equipment = 5.0
+		torpedo_equipment = 5.0
+		motorized_equipment = 5.0
+		armor = 5.0
+		artillery = 12.0
+		support_tech = 10.5
+	}
+}
+
+ai_focus_naval_GER = {
+    research = {
+        naval_equipment = 10.0
+		naval_sub_design = 9.0
+        naval_doctrine = 75.0
+        marine_tech = 10.0
+        dd_tech = 8.0
+		asw_tech_dd = 6.0
+        cl_tech = 5.0
+		asw_tech_cl = 4.0
+        ca_tech = 5.0
+        bc_tech = 3.0
+        bb_tech = 8.0
+        shbb_tech = 5.0
+        tp_tech = 3.0
+        cv_tech = 5.0
+        ss_tech = 10.0
+		torpedo_equipment = 5.0
+		motorized_equipment = 3.0
+		armor = 3.0
+    }
+}
+
+ai_focus_naval_air_GER = {
+	research = {
+		naval_air = 4.0
+		naval_bomber = 3.0
+		motorized_equipment = 3.0
+		armor = 3.0
+	}
+}
+
+ai_focus_aviation_GER = {
+	research = {
+		air_doctrine = 30.0
+		light_air = 10.0
+		light_fighter = 15.0
+		jet_technology = 5.0
+		cas_bomber = 10.0		
+		medium_air = 3.0
+		cat_heavy_fighter = 5.0
+		tactical_bomber = 10.0
+		heavy_air = 1.5
+		air_equipment = 5.0
+		#para_tech = 10.0
+	}
+}
+### EOF ###
